@@ -1,6 +1,6 @@
 # The Hollenbeck–Verbitsky (2010) conjecture is false — Lean 4 proof
 
-The paper: its link will be added here when it is posted.
+The paper: https://doi.org/10.5281/zenodo.23728903
 
 This folder is a Lean 4 proof of the paper's results.
 
