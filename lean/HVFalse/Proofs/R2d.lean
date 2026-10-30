@@ -49,8 +49,8 @@ theorem integral_nonneg_of_trigConvex {q : ℝ} (hq0 : 0 < q) {φ : ℝ → ℝ}
     nlinarith [hmono]
   exact (mul_nonneg_iff_of_pos_right (by nlinarith)).1 key
 
-/-- Sec. 3 (l.226-228): "the q-subtrigonometric functions are therefore the 2π-periodic
-q-trigonometrically convex functions of Levin's theory" - the converse direction of C06a, for continuous `φ`
+/-- The converse direction of C06a (row C06f, RETIRED: not a claim of the paper, which states only C06a's direction,
+l.244-245), for continuous `φ`
 (and every `0 < q ≤ 1`). Local sub-mean property of `|ζ|^q φ(arg ζ)`: off `0` from a supporting sinusoid
 (`VComp.local_ne_V`); at `0` the circle average is `r^q` times the mean of `φ`, which is `≥ 0`; then the local-to-global
 step `LocGlob.locGlob`. -/

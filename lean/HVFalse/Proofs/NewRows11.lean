@@ -95,7 +95,7 @@ theorem ratio_bounds {S Slo Shi m j f e : ℝ} (hS : Slo ≤ S ∧ S ≤ Shi) (h
     nlinarith [mul_nonneg (sub_nonneg.mpr hS.2) (sub_nonneg.mpr hf2)]
   exact abs_le.mpr ⟨by linarith, by linarith⟩
 
-/-- N1, table of Prop. 10, column "open window" (l.555-560; 4-decimal rounding). -/
+/-- N1, table of Prop. 10, column "open window" (l.556-561; 4-decimal rounding). -/
 theorem window_ends : ∀ r ∈ ([(7/5, 35000/10000, 53119/10000), (3/2, 30000/10000, 40000/10000),
       (8/5, 26667/10000, 32398/10000), (17/10, 24286/10000, 27535/10000), (9/5, 22500/10000, 24203/10000),
       (19/10, 21111/10000, 21800/10000)] : List (ℝ × ℝ × ℝ)),
@@ -110,7 +110,7 @@ theorem window_ends : ∀ r ∈ ([(7/5, 35000/10000, 53119/10000), (3/2, 30000/1
   · exact ⟨by norm_num [abs_le], abs_of_encl encl_9_5 (by norm_num) (by norm_num)⟩
   · exact ⟨by norm_num [abs_le], abs_of_encl encl_19_10 (by norm_num) (by norm_num)⟩
 
-/-- N2, column "failing fraction" (l.555-560, l.569-570): `(sec² - s̄)/(sec² - p/(p-1))`, `s̄ = (s₋+s₊)/2`, to 0.1%. -/
+/-- N2, column "failing fraction" (l.556-561, l.565-566): `(sec² - s̄)/(sec² - p/(p-1))`, `s̄ = (s₋+s₊)/2`, to 0.1%. -/
 theorem failing_fractions : ∀ r ∈ ([(7/5, 52986/10000, 52989/10000, 7/1000), (3/2, 39572/10000, 39575/10000, 43/1000),
       (8/5, 31799/10000, 31802/10000, 104/1000), (17/10, 26921/10000, 26925/10000, 188/1000),
       (9/5, 23764/10000, 23767/10000, 257/1000), (19/10, 21588/10000, 21591/10000, 306/1000)] : List (ℝ × ℝ × ℝ × ℝ)),
@@ -129,7 +129,7 @@ theorem failing_fractions : ∀ r ∈ ([(7/5, 52986/10000, 52989/10000, 7/1000),
 theorem not_twoVar_of_point {p s y t : ℝ} (ht : t ∈ Icc (-π) π) (h : Gam p s y t < ee p t) : ¬ TwoVar p s :=
   fun h2 => absurd (h2 y t ht) (not_le.mpr h)
 
-/-- N3, Introduction (l.119-120): the failing part of the open window is under 1% at `p = 7/5` and about 31% at `p = 19/10`. -/
+/-- N3, Introduction (l.110-111): the failing part of the open window is under 1% at `p = 7/5` and about 31% at `p = 19/10`. -/
 theorem window_fail_part (hb : Paper.C19b_boxes) :
     (∀ s0 : ℝ, (∀ s : ℝ, 0 < s → (TwoVar (7/5) s ↔ s ≤ s0)) →
       (Ssec (7/5) - s0) / (Ssec (7/5) - (7/5) / (7/5 - 1)) < 1 / 100) ∧
@@ -160,7 +160,7 @@ theorem window_fail_part (hb : Paper.C19b_boxes) :
       rw [div_le_iff₀ hpos]; linarith
     exact abs_le.mpr ⟨by linarith, by linarith⟩
 
-/-- N4, Remark after Prop. 11 (l.590-592): "on the first cell ... for all s ≤ 6.413, while p/(p-1) ≤ 4 there". -/
+/-- N4, Remark after Prop. 11 (l.591-593): "on the first cell ... for all s ≤ 6.413, while p/(p-1) ≤ 4 there". -/
 theorem first_cell : 6413 / 1000 ≤ cellLevel 0 - 2 / 10 ^ 6 ∧
     ∀ p ∈ Set.Icc (cellLeft 0) (cellRight 0), p / (p - 1) ≤ 4 := by
   constructor
@@ -181,7 +181,7 @@ theorem first_cell : 6413 / 1000 ≤ cellLevel 0 - 2 / 10 ^ 6 ∧
     rw [div_le_iff₀ (by linarith)]
     linarith
 
-/-- N5, footnote of Sec. 2 (l.205-208): `Γ(y,t) ≥ (c - ε) e^{p|y|/2}` for large `|y|`, uniformly in `t`, with
+/-- N5, footnote of Sec. 2 (l.216-219): `Γ(y,t) ≥ (c - ε) e^{p|y|/2}` for large `|y|`, uniformly in `t`, with
 `c = (2 cos(π/2p))^{-p} - 2^{-p/s}`. -/
 theorem gam_lower_asymp {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) :
     ∀ ε > 0, ∃ R : ℝ, ∀ y t : ℝ, R ≤ |y| →

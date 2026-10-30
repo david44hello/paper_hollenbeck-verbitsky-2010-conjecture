@@ -2,7 +2,7 @@
   HVFalse/Proofs/SaddleSigns.lean - Prop. saddle: K > 0 and H > 0 for 4/3 < p < 2, by hand, no interval arithmetic
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
-  Route (the paper, l.373-378, certifies the signs with interval arithmetic, Arb and mpmath). Put c = cos(π/p) and x = π/p - π/2, so
+  Route (the paper, l.391-396, certifies the signs with interval arithmetic, Arb and mpmath). Put c = cos(π/p) and x = π/p - π/2, so
   x ∈ (0, π/4) and sin x = -c. Then
     uu p = (1 - c)/(1 + c),   K = (p - 2 - p c)/(1 + c),   H = 4 F/(1 + c)²,   F = (3/2)(2-p)²(1+c) - (2-p)c - p c².
   K > 0 is Jordan's inequality 2x/π < sin x. Since p (2x + π) = 2π, F (2x + π)² = 2 Φ(x, sin x), where
@@ -233,7 +233,7 @@ theorem F_pos {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) : 0 < F p (cos (π / p))
 end SaddleSigns
 
 open SaddleSigns in
-/-- **Prop. saddle, sign of `K`** (tex l.324, l.370, l.372): `K = (p-1)u - 1 > 0` for `4/3 < p < 2`, `u = tan²(π/(2p))`.
+/-- **Prop. saddle, sign of `K`** (tex l.339, l.373, l.375): `K = (p-1)u - 1 > 0` for `4/3 < p < 2`, `u = tan²(π/(2p))`.
     Route difference: Jordan's inequality instead of the paper's 16 Arb intervals. -/
 theorem K_pos {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) : 0 < K p (uu p) := by
   have hp1' : 1 < p := by linarith
@@ -246,7 +246,7 @@ theorem K_pos {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) : 0 < K p (uu p) := by
   linarith
 
 open SaddleSigns in
-/-- **Prop. saddle, sign of `H`** (tex l.324, l.363-378): `H(p, u) > 0` for `4/3 < p < 2`, `u = tan²(π/(2p))`.
+/-- **Prop. saddle, sign of `H`** (tex l.339, l.383-396): `H(p, u) > 0` for `4/3 < p < 2`, `u = tan²(π/(2p))`.
     Route difference: an exact identity `H = 4F/(1+c)²` and `F (2x+π)² = 2Φ(x, sin x)` with elementary bounds, instead of the
     paper's 367 Arb intervals and the Taylor argument at `p = 2`. -/
 theorem H_pos {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) : 0 < H p (uu p) := by

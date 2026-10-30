@@ -1,5 +1,5 @@
 /-
-  HVFalse/Proofs/RemarkDelta.lean - the exact claims of the remark "why δ is so small" (paper l.468-485, after Prop. 8)
+  HVFalse/Proofs/RemarkDelta.lean - the exact claims of the remark "the size of δ" (paper l.496-507, after Prop. 8)
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 -/
 import HVFalse.Defs.Explicit
@@ -113,9 +113,9 @@ theorem ee_arc_zero : ee (3 / 2) (-(2 * π / 3)) = 0 := by
 
 /-! ## The remark -/
 
-/-- The remark "why `δ` is so small", its exact claims: `η = 0.0102/π`, `q t₂ = π α₋ - π/2`, `q t₃ = π/2 + π η`,
+/-- The remark "the size of `δ`" (l.496-507), its exact claims: `η = 0.0102/π`, `q t₂ = π α₋ - π/2`, `q t₃ = π/2 + π η`,
 `e(t₂) = tan ϑ sin(π α₋)`, `e(t₃) = -tan ϑ sin(π η)`, the `e`-terms of `W₁` cancel (so `W₁ = Σ (Γ - e) B` literally), and
-`Γ(0, t₁) = e(t₁) = 0` on the third arc. -/
+`Γ(0, t₁) = e(t₁) = 0` at the contact point `(0, -π/p)` (l.434-435). -/
 theorem remark_delta_exact :
     let am : ℝ := 3 / 4 * Explicit.aA
     let ap : ℝ := 3 / 4 * Explicit.aB

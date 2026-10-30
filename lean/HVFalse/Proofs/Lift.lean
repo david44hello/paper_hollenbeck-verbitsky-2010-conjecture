@@ -155,7 +155,7 @@ theorem norm_blaschke_circle {zs : List ℂ} (hzs : ∀ a ∈ zs, 0 < ‖a‖ �
 
 /-! ## Lemma lift -/
 
-/-- **C08, Lemma 3 lift** (paper l.267-281), with the statement. -/
+/-- **C08, Lemma 3 lift** (paper l.272-285), with the statement. -/
 theorem lift {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s)
     (gp g0p : Polynomial ℂ) (hgp : gp ≠ 0) (hg0 : gp.eval 0 = 0) (k : ℕ) (hk : 1 ≤ k) (zs : List ℂ)
     (hzs : ∀ a ∈ zs, 0 < ‖a‖ ∧ ‖a‖ < 1) (hh_ne : ∀ ζ ∈ Metric.ball (0 : ℂ) 1, g0p.eval ζ ≠ 0)

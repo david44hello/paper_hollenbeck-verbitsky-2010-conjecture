@@ -338,7 +338,7 @@ theorem valley_isBigO (hp1 : 4 / 3 < p) (hp2 : p < 2) :
 
 end Specific
 
-/-- **Prop. saddle, the valley** (tex l.325-327, l.354-361): at `s = S = sec²ϑ`, along `t = π/p - (a₂₁/(2a₀₂)) y²`,
+/-- **Prop. saddle, the valley** (tex l.340-344, l.375-381): at `s = S = sec²ϑ`, along `t = π/p - (a₂₁/(2a₀₂)) y²`,
     `Γ - e = A(p) y⁴ + O(y⁶)`. -/
 theorem saddle_valley_proved {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) :
     ∃ C δ : ℝ, 0 < δ ∧ ∀ y : ℝ, |y| < δ →
@@ -349,7 +349,7 @@ theorem saddle_valley_proved {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) :
   have h := hball (by rwa [Real.dist_eq, sub_zero])
   rwa [Real.norm_eq_abs, Real.norm_eq_abs, abs_of_nonneg (by positivity : (0:ℝ) ≤ y ^ 6)] at h
 
-/-- `A(p) < 0` for `4/3 < p < 2` (tex l.326): from `H > 0`, `K > 0`. -/
+/-- `A(p) < 0` for `4/3 < p < 2` (tex l.342): from `H > 0`, `K > 0`. -/
 theorem Acoef_neg {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) : Acoef p < 0 := by
   have hp0 : 0 < p := by linarith
   have hH := H_pos hp1 hp2
@@ -366,7 +366,8 @@ theorem Acoef_neg {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) : Acoef p < 0 := by
   have : 0 < p * Ssec p * uu p * H p (uu p) / (384 * K p (uu p)) := by positivity
   linarith [neg_div (384 * K p (uu p)) (p * Ssec p * uu p * H p (uu p))]
 
-/-- The valley coefficient `c_v = a₂₁/(2a₀₂) > 0` (tex l.361: "the valley has t < π/p"). -/
+/-- The curve coefficient `c_v = a₂₁/(2a₀₂) > 0` (row C10d, a Lean-only helper: the curve of Prop. 5, l.340, has
+`t < π/p`). -/
 theorem valleyC_pos {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) : 0 < valleyC p := by
   have hp0 : 0 < p := by linarith
   have hK := K_pos hp1 hp2
@@ -380,7 +381,7 @@ theorem valleyC_pos {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) : 0 < valleyC p :=
   unfold valleyC a21 a02
   positivity
 
-/-- **Theorem A's input** (tex l.391): at `s = sec²ϑ` there is a point with `0 < t < π/p` and `Γ < e`. -/
+/-- **Theorem A's input** (tex l.406): at `s = sec²ϑ` there is a point with `0 < t < π/p` and `Γ < e`. -/
 theorem saddle_point_proved {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) :
     ∃ y t : ℝ, 0 < t ∧ t < π / p ∧ Gam p (Ssec p) y t < ee p t := by
   obtain ⟨C, δ, hδ, hb⟩ := saddle_valley_proved hp1 hp2

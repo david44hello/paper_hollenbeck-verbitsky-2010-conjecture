@@ -2,11 +2,11 @@
   HVFalse/Proofs/R2Mine.lean - sentences of Sec. 2 and of the proof of Prop. 5 of the paper
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
-  Sec. 2 (l.199-204): "always s₀(p) ≤ sec²ϑ. Indeed, e(π/p) = tanϑ cos(π/2) = 0, cos(π/p) = cos 2ϑ and
-  1 + cos 2ϑ = 2/sec²ϑ, so for every 1 < p < 2 and s > 0, Γ(y,π/p) - e(π/p) = (1 + (sec²ϑ/2)(cosh y - 1))^q
-  - cosh(sy/2)^{p/s} = (p/8)(sec²ϑ - s)y² + O(y⁴), which is negative for small y ≠ 0 when s > sec²ϑ."
+  Sec. 2 (l.207-211): "Moreover s₀(p) ≤ sec²ϑ: as qπ/p = π/2 and 1 + cos(π/p) = 2/sec²ϑ, we have e(π/p) = 0 and, for
+  every 1 < p < 2 and s > 0, Γ(y,π/p) - e(π/p) = (1 + (sec²ϑ/2)(cosh y - 1))^q - cosh(sy/2)^{p/s}
+  = (p/8)(sec²ϑ - s)y² + O(y⁴), which is negative for small y ≠ 0 when s > sec²ϑ."
   (the y² expansion is NewRows12.gam_expansion_pi_p). Here s₀ ≤ sec²ϑ is proved from the expansion alone, with no
-  cited result. Prop. 5 proof (l.374-375): u'(p) = -(π/p²)√u (1+u) for u = tan²(π/2p).
+  cited result. Prop. 5 proof (l.384): u'(p) = -(π/p²)√u (1+u) for u = tan²(π/2p).
 -/
 import HVFalse.Proofs.NewRows12
 import HVFalse.Proofs.Small

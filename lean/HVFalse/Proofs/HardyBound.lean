@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/HardyBound.lean - C13b: the explicit pair `z, w` of Prop. 8 is in `H^{3/2}` for every `δ ∈ (0, 2π)`
-  (the paper, proof of Prop. 8, l.442-444), from C13u (`0 ≤ Re Y ≤ y₂` in the disc) and one domination bound
+  (the paper, proof of Prop. 8, l.471-473), from C13u (`0 ≤ Re Y ≤ y₂` in the disc) and one domination bound
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
   Route: for `|c| = 1` and `0 ≤ r ≤ 1`, `|1 - c| ≤ 2|1 - rc|`. All `α_k > 0` and `Σ α_k = 2`, so
@@ -383,7 +383,7 @@ theorem differentiableOn_wf (δ : ℝ) : DifferentiableOn ℂ (Explicit.wf δ) (
 
 /-! ### C13b -/
 
-/-- C13b, Prop. 8 (l.442-444): "we have `z, w ∈ H^p` for every `δ ∈ (0, 2π)`" (`p = 3/2`). -/
+/-- C13b, Prop. 8 (l.471-473): "we have `z, w ∈ H^p` for every `δ ∈ (0, 2π)`" (`p = 3/2`). -/
 theorem C13b_proved : Paper.C13b_explicit_hardy := fun δ hδ0 hδ1 =>
   ⟨inHardy_of_le hδ0 hδ1 (differentiableOn_zf δ) fun θ _ hreg hr0 hr1 =>
       (norm_zw_radial_le hδ0 hδ1 (Complex.norm_exp_ofReal_mul_I θ) hreg hr0 hr1).1,

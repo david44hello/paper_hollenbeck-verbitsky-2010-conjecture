@@ -1,8 +1,8 @@
 /-
-  HVFalse/Proofs/UMean.lean - the circle mean of the minorant E (paper Sec. 2, l.182-183)
+  HVFalse/Proofs/UMean.lean - the circle mean of the minorant E (paper Sec. 2, l.190-191)
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
-  The paper (l.182-183): "its mean over |ζ| = r is r^q tanϑ sin(qπ)/(qπ) > 0 = E(0)". In polar form ζ = r e^{it},
+  The paper (l.190-191): "its mean over |ζ| = r is r^q tanϑ sin(qπ)/(qπ) > 0 = E(0)". In polar form ζ = r e^{it},
   -π < t ≤ π, arg ζ = t, so E = r^q e(t) with e(t) = tanϑ cos(qt), and the mean is
   (2π)⁻¹ ∫_{-π}^{π} r^q tanϑ cos(qt) dt = r^q tanϑ (2π)⁻¹ (2 sin(qπ)/q) = r^q tanϑ sin(qπ)/(qπ).
   It is > 0 since 0 < ϑ < π/2 and 0 < qπ < π (q = p/2 ∈ (1/2, 1)); and E(0) = 0^q e(0) = 0.

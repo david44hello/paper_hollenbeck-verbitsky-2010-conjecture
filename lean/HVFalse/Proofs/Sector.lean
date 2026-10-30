@@ -1,9 +1,9 @@
 /-
-  HVFalse/Proofs/Sector.lean - homogeneous subharmonic functions: sector comparison and trig convexity (paper l.222-228)
+  HVFalse/Proofs/Sector.lean - homogeneous subharmonic functions: sector comparison and trig convexity (paper l.235-245)
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
-  Why this file exists: the paper (l.224-228) gets "q-subtrigonometric ⇒ trigonometrically convex" from HKV2003 Prop. 3.3,
-  which ASSUMES continuity (see [HKV2003, Prop. 3.3]). We prove the direction we need.
+  Why this file exists: the paper (l.244-245) gets q-subtrigonometric ⇒ trigonometrically convex from HKV2003 Prop. 3.3,
+  which ASSUMES continuity (the paper shows it just before, l.242-243). We prove the direction we need.
   Maximum principle (part A): for a real upper semicontinuous `v` with the sub-mean-value property and a `w` with the mean-value
   property on discs inside `U`, a maximum of `v - w + δ‖z‖²` at an interior point contradicts
   `circleAverage ‖·‖² c ρ = ‖c‖² + ρ² > ‖c‖²`; so `v - w ≤ 0` on `K` when it is `≤ 0` off the interior.

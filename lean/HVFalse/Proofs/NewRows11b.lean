@@ -2,8 +2,8 @@
   HVFalse/Proofs/NewRows11b.lean - U13, Remark after Prop. 11 (the paper): the certified part of the window
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
-  Paper: "Inside a cell the certified part of the window, (s_cell - p/(p-1))/(sec²(π/2p) - p/(p-1)), is smaller than at its
-  right end; ... its minimum over [4/3, 1.99] is about 16% (at p = 1.975)." Notation j(p) = p/(p-1), W(p) = Ssec p - j(p) (the window width).
+  Paper (l.593-595): "At the right end of a cell the certified part of the window, `(s_cell - p/(p-1))/(sec²(π/2p) - p/(p-1))`,
+  is about κ. Inside the cell it is smaller, and its minimum over [4/3, 1.99] is about 16% (at p = 1.975)." Notation j(p) = p/(p-1), W(p) = Ssec p - j(p) (the window width).
   W is antitone on (1, 2): W' = 1/(p-1)² - π sinθ/(p² cos³θ) (θ = π/2p), and W' ≤ 0 reduces with φ = π/2 - θ to
   π sin³φ < 4φ² cos φ on (0, π/4] (sin φ ≤ φ, cos φ ≥ 1 - φ²/2, π < 3.15).
   U13a: j(p) ≥ j(p_b), W(p) ≥ W(p_b) > 0 and s_cell ≥ j(p_b) (C20b) give frac(p) ≤ frac(p_b).
@@ -104,7 +104,7 @@ theorem W_right_pos {i : ℕ} (hi : i < 140) (hab : cellLeft i ≤ cellRight i) 
   by_contra hneg
   nlinarith [mul_nonneg hκ (neg_nonneg.mpr (not_lt.mp hneg))]
 
-/-- U13a (Remark after Prop. 11, l.592-593): inside a cell the certified part of the window is at most its value at the
+/-- U13a (Remark after Prop. 11, l.593-594): inside a cell the certified part of the window is at most its value at the
 right end. -/
 theorem frac_le_right : ∀ i : ℕ, i < 140 → ∀ p ∈ Set.Icc (cellLeft i) (cellRight i), ∀ sc : ℝ,
     cellLevel i - 2 / 10 ^ 6 < sc → sc ≤ cellLevel i →
@@ -129,7 +129,7 @@ theorem frac_le_right : ∀ i : ℕ, i < 140 → ∀ p ∈ Set.Icc (cellLeft i) 
     _ ≤ (sc - cellRight i / (cellRight i - 1)) / (Ssec (cellRight i) - cellRight i / (cellRight i - 1)) :=
         div_le_div_of_nonneg_left (by linarith) hWb hWpb
 
-/-- U13b (l.593-594): "about 16% (at p = 1.975)": at `p = 1.975 = cellLeft 129` the fraction lies in `[0.16, 0.17]`. -/
+/-- U13b (l.594-595): "about 16% (at p = 1.975)": at `p = 1.975 = cellLeft 129` the fraction lies in `[0.16, 0.17]`. -/
 theorem frac_at_1975 : ∀ sc : ℝ, cellLevel 129 - 2 / 10 ^ 6 < sc → sc ≤ cellLevel 129 →
     16 / 100 ≤ (sc - 1975 / 1000 / (1975 / 1000 - 1)) / (Ssec (1975 / 1000) - 1975 / 1000 / (1975 / 1000 - 1)) ∧
     (sc - 1975 / 1000 / (1975 / 1000 - 1)) / (Ssec (1975 / 1000) - 1975 / 1000 / (1975 / 1000 - 1)) ≤ 17 / 100 := by
@@ -152,7 +152,7 @@ theorem frac_at_1975 : ∀ sc : ℝ, cellLevel 129 - 2 / 10 ^ 6 < sc → sc ≤ 
   · rw [le_div_iff₀ hW]; linarith
   · rw [div_le_iff₀ hW]; linarith
 
-/-- U13c (l.593-594): "its minimum ... is about 16%": on every cell, for every certified `s_cell`, the fraction is at least 0.16. -/
+/-- U13c (l.594-595): "its minimum ... is about 16%": on every cell, for every certified `s_cell`, the fraction is at least 0.16. -/
 theorem frac_ge : ∀ i : ℕ, i < 140 → ∀ p ∈ Set.Icc (cellLeft i) (cellRight i), ∀ sc : ℝ,
     cellLevel i - 2 / 10 ^ 6 < sc → sc ≤ cellLevel i → 16 / 100 ≤ (sc - p / (p - 1)) / (Ssec p - p / (p - 1)) := by
   intro i hi p hp sc hsc1 _

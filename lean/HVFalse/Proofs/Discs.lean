@@ -2,7 +2,7 @@
   HVFalse/Proofs/Discs.lean - (eq:discs) on trigonometric polynomials (the paper)
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
-  Route (the paper's own, l.168-171, made exact on trigonometric polynomials):
+  Route (the paper's own, l.178-181, made exact on trigonometric polynomials):
   (1) coefficients c ↦ polynomials z = Σ_{n≥0} c_n ζ^n, w = Σ_{n<0} conj(c_n) ζ^{-n} (`toZ`, `toW`); w(0) = 0, and on the circle
       P₊f = z(e^{iθ}), P₋f = conj w(e^{iθ}).  Conversely (z, w) with w(0) = 0 ↦ c (`ofZW`) with the same two identities.
   (2) pointwise ((|P₊f|^s + |P₋f|^s)^{1/s})^p = 2^{p/s} ((|z|^s + |w|^s)/2)^{p/s} and hvConst^p = 2^{p/s} A^p, so
@@ -217,7 +217,7 @@ theorem hv_integral_iff {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) {P 
     have := mul_le_mul_of_nonneg_left (show IX ≤ Ap * IY by linarith) hk.le
     linarith [mul_assoc ((2 : ℝ) ^ (p / s)) Ap IY]
 
-/-- C01 (eq:discs, l.168-174) on trigonometric polynomials: (HV) at `(p,s)` with the conjectured constant ⇔ `DiscIneq`. -/
+/-- C01 (eq:discs, l.178-184) on trigonometric polynomials: (HV) at `(p,s)` with the conjectured constant ⇔ `DiscIneq`. -/
 theorem discs_equiv {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) :
     HVIneq p s (hvConst p s) ↔ DiscIneq p s := by
   constructor

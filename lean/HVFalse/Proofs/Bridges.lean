@@ -53,7 +53,7 @@ theorem tan_three_pi_div_eight_sq : Real.tan (3*Real.pi/8)^2 = 3 + 2*Real.sqrt 2
   field_simp
   linear_combination (2:ℝ) * hs2
 
-/-- Paper (iii): K(4/3) = 2 sqrt 2/3, with u(4/3) = 3 + 2 sqrt 2. -/
+/-- Row C10a5 (a Lean-only helper): K(4/3) = 2 sqrt 2/3, with u(4/3) = 3 + 2 sqrt 2 (proof of Prop. 5, l.386). -/
 theorem K_four_thirds : K (4/3) (3 + 2*Real.sqrt 2) = 2*Real.sqrt 2/3 := by
   unfold K; ring
 
@@ -485,7 +485,8 @@ theorem psi_abs (p s y t : ℝ) : Gam p s y t - ee p t = Gam p s |y| |t| - ee p 
     · rw [abs_of_nonpos hy, abs_of_nonneg ht, gam_even_y]
     · rw [abs_of_nonpos hy, abs_of_nonpos ht, gam_even_y, gam_even_t, ee_even]
 
-/-- Paper Sec. 4 (proof of Prop. saddle): "`∂_y Ψ = 0` by evenness", at `y = 0`, for every `t`. Where `y ↦ Ψ(y,t)` is not
+/-- Paper Sec. 5 (proof of Prop. 5, l.349): "It is even in `y`, so `∂_yΨ = 0` at `(0,π/p)`"; here at `y = 0`, for
+every `t`. Where `y ↦ Ψ(y,t)` is not
 differentiable at `0` (only `t = π` mod `2π`) this holds through the convention `deriv = 0`; the genuine statement is
 `psi_hasDerivAt_y_zero`. -/
 theorem psi_deriv_y_zero (p s t : ℝ) : deriv (fun y => Gam p s y t - ee p t) 0 = 0 := by
@@ -519,7 +520,7 @@ theorem psi_hasDerivAt_y_zero (p s t : ℝ) (ht : 1 + cos t ≠ 0) :
 
 /-! ### (c) e is exact for the discrete inequality and solves e'' + q^2 e = 0 -/
 
-/-- Paper Sec. 7: "The inequality is exact for `cos(qt)`": `e(t+h) + e(t-h) - 2 cos(qh) e(t) = 0` (for the formula `ee`, so for
+/-- Sec. 7 (row C23c, a Lean-only helper): the discrete inequality is exact for `cos(qt)`: `e(t+h) + e(t-h) - 2 cos(qh) e(t) = 0` (for the formula `ee`, so for
 the paper's `e` whenever `t ± h` and `t` lie in `[-π, π]`). -/
 theorem ee_discrete_exact (p t h : ℝ) : ee p (t + h) + ee p (t - h) - 2 * cos (p / 2 * h) * ee p t = 0 := by
   have h1 : p / 2 * (t + h) = p / 2 * t + p / 2 * h := by ring

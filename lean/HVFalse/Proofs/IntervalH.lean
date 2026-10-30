@@ -1,5 +1,5 @@
 /-
-  HVFalse/Proofs/IntervalH.lean - C10e: the paper's three interval steps for H(p, u(p)) (Prop. 5, l.373-378), by hand
+  HVFalse/Proofs/IntervalH.lean - C10e: the paper's three interval steps for H(p, u(p)) (Prop. 5, l.391-396), by hand
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
   The paper checks with Arb/mpmath: (a) d/dp H(p,u(p)) > 0 on [4/3, 403/300]; (b) H > 0 on [403/300, 199/100];
@@ -274,7 +274,7 @@ theorem D2_pos {p : ℝ} (hp1 : 199 / 100 ≤ p) (hp2 : p ≤ 2) : 0 < D2 p := b
 
 /-! ## C10e -/
 
-/-- **C10e** (Prop. 5 proof, l.373-378): the paper's three interval steps. -/
+/-- **C10e** (Prop. 5 proof, l.391-396): the paper's three interval steps. -/
 theorem H_interval_steps :
     (∀ p ∈ Icc (4 / 3 : ℝ) (403 / 300), 0 < deriv (fun p => H p (uu p)) p) ∧
       (∀ p ∈ Icc (403 / 300 : ℝ) (199 / 100), 0 < H p (uu p)) ∧

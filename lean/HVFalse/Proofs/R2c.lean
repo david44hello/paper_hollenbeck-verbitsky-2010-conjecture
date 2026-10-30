@@ -1,6 +1,6 @@
 /-
-  HVFalse/Proofs/R2c.lean - rows of the paper: (0 ≤ Re Y ≤ y₂ in the disc, l.430-433) and the
-  omega step of Sec. 7 (l.640-645)
+  HVFalse/Proofs/R2c.lean - 0 ≤ Re Y ≤ y₂ in the disc (row C13u, l.460-463) and the omega step
+  (row C23f, RETIRED: not a claim of the paper)
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 -/
 import HVFalse.Defs.Explicit
@@ -29,7 +29,7 @@ theorem ePlus_mul_eMinus (δ : ℝ) : Explicit.ePlus δ * Explicit.eMinus δ = 1
   unfold Explicit.ePlus Explicit.eMinus
   rw [← Complex.exp_add, add_neg_cancel, Complex.exp_zero]
 
-/-- l.430-433: "`Re Y` is `y₂` times the harmonic measure ... So `0 ≤ Re Y ≤ y₂` in the disc", for
+/-- l.460-463: "`Re Y` is `y₂` times the harmonic measure ... It follows that `0 ≤ Re Y ≤ y₂` in the disc", for
 `0 < δ < 2π`. -/
 theorem C13u_ReY_bounds {δ : ℝ} (hδ0 : 0 < δ) (hδ1 : δ < 2 * Real.pi) :
     ∀ ζ ∈ Metric.ball (0 : ℂ) 1, 0 ≤ (Explicit.Yf δ ζ).re ∧ (Explicit.Yf δ ζ).re ≤ Explicit.y2 := by
@@ -114,10 +114,10 @@ theorem C13u_ReY_bounds {δ : ℝ} (hδ0 : 0 < δ) (hδ1 : δ < 2 * Real.pi) :
   · nlinarith
 
 
-/-- Sec. 7 (l.640-645), the omega step: if `ρ'' + q²ρ ≥ 0` on `[a, b]`, `q(b - a) < π` and `ρ(a) = ρ(b) = 0`, then
-`ρ ≤ 0` on `[a, b]`. The paper's route: `c(t) = cos(q(t - (a+b)/2)) > 0` solves `c'' + q²c = 0`; `ω = cρ' - c'ρ` has
-`ω' = c(ρ'' + q²ρ) ≥ 0`, so `ω` is nondecreasing; `(ρ/c)' = ω/c²` has the sign of `ω`, so `ρ/c ≤ 0`. (The paper applies
-this to `ρ` with `ρ'' + q²ρ = μ` a measure; this row is the `C²` case.) -/
+/-- The omega step (row C23f, RETIRED: not a claim of the paper; for `λ_{*,N} ≤ λ_*` Sec. 7 now cites [HKV, (3.1)],
+l.641-643): if `ρ'' + q²ρ ≥ 0` on `[a, b]`, `q(b - a) < π` and `ρ(a) = ρ(b) = 0`, then `ρ ≤ 0` on `[a, b]`. Proof: `c(t) = cos(q(t - (a+b)/2)) > 0` solves `c'' + q²c = 0`; `ω = cρ' - c'ρ` has
+`ω' = c(ρ'' + q²ρ) ≥ 0`, so `ω` is nondecreasing; `(ρ/c)' = ω/c²` has the sign of `ω`, so `ρ/c ≤ 0`. (This is the `C²`
+case.) -/
 theorem omega_step {q a b : ℝ} (hq : 0 < q) (_hab : a < b) (hlen : q * (b - a) < Real.pi) {ρ : ℝ → ℝ}
     (hρ : ContDiff ℝ 2 ρ) (hμ : ∀ t ∈ Set.Icc a b, 0 ≤ deriv (deriv ρ) t + q ^ 2 * ρ t)
     (ha : ρ a = 0) (hb : ρ b = 0) : ∀ t ∈ Set.Icc a b, ρ t ≤ 0 := by

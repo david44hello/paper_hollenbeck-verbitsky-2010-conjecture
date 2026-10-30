@@ -258,7 +258,7 @@ theorem taylor_isBigO (hp1 : 1 < p) (hp2 : p < 2) :
 
 end Specific
 
-/-- **C10b1, eq:taylor** (tex l.333-335) at `s = S`. -/
+/-- **C10b1, eq:taylor** (tex l.350-352) at `s = S`. -/
 theorem taylor_proved {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) :
     ∃ C δ : ℝ, 0 < δ ∧ ∀ y τ : ℝ, |y| < δ → |τ| < δ →
       |Gam p (Ssec p) y (π / p + τ) - ee p (π / p + τ)

@@ -1,5 +1,5 @@
 /-
-  HVFalse/Proofs/Forcing.lean - Lemma rigidity (paper l.238-264), from trig convexity alone
+  HVFalse/Proofs/Forcing.lean - Lemma rigidity (paper l.247-269), from trig convexity alone
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
   Notation: q = p/2, a = π/p (so q a = π/2), k = tan ϑ, e(t) = k cos(qt). Hypothesis: φ is q-trig-convex (`TrigConvex`)
@@ -197,7 +197,7 @@ theorem forcing_core {q a k C : ℝ} {φ : ℝ → ℝ} (hq : 0 < q) (hq1 : q < 
   · exact (hcl t ⟨h, h'⟩).symm.le
   · exact forcing_right hq hq1 hqa htc hφa (hin _ (by linarith) (by linarith)) h' h2
 
-/-- C07, Lemma rigidity (paper l.238-264) with trig convexity in place of "q-subtrigonometric" (the bridge is HKV2003
+/-- C07, Lemma rigidity (paper l.247-269) with trig convexity in place of "q-subtrigonometric" (the bridge is HKV2003
 Prop. 3.3, cited elsewhere). `hs` and `hper` are not needed by the proof. -/
 theorem forcing_of_trigConvex {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s)
     {φ : ℝ → ℝ} (hper : Function.Periodic φ (2 * π)) (htc : TrigConvex (p / 2) φ)

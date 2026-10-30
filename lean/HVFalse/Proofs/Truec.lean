@@ -8,13 +8,14 @@
   (2) F is nonempty (from hfin through (1)) and bounded below by 1: λ* = sInf F ≥ 1 and IsGLB F λ*.
   (3) g is monotone on F and continuous at λ*, so IsGLB (g '' F) (g λ*) (Mathlib's IsGLB.isGLB_of_tendsto).
   hv_finite: (a^s + b^s)^{1/s} ≤ 2^{1/s} max(a, b) pointwise and [HV2000] (Cited.hv2000_riesz) give (HV) on trigonometric
-  polynomials with C = 2^{1/s}/sin(π/p); DensityLp.hvIneq_iff_lp moves it to L^p. With Cited.mm2022_lower_bound this removes
-  both hypotheses of C22c (truec_formula').
+  polynomials with C = 2^{1/s}/sin(π/p); DensityLp.hvIneq_iff_lp moves it to L^p. With R572.mm2022_lower_bound_one (the
+  cited [MM2022, Sec. 2] bound at t = 1) this removes both hypotheses of C22c (truec_formula').
 -/
 import HVFalse.Proofs.DensityLp
 import HVFalse.Proofs.ColeHom
 import HVFalse.Proofs.Discs
 import HVFalse.Cited.MM2022
+import HVFalse.Proofs.R572
 
 open Real Set Filter Topology
 
@@ -145,12 +146,12 @@ theorem hv_finite {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) : ∃ C :
     mul_pos (Real.rpow_pos_of_pos two_pos _) (one_div_pos.mpr (sin_pi_div_pos hp1))
   exact ⟨_, hC, (DensityLp.hvIneq_iff_lp hp1 hp2 hs hC).mp (hvIneq_finite hp1 hp2.le hs)⟩
 
-/-- C22c with no hypothesis: `hfin` from `hv_finite`, `hMM` from [MM2022] (Cited.mm2022_lower_bound). -/
+/-- C22c with no hypothesis: `hfin` from `hv_finite`, `hMM` from [MM2022] (R572.mm2022_lower_bound_one). -/
 theorem truec_formula' {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) (hsS : s ≤ Ssec p) :
     ∃ lamStar : ℝ, 1 ≤ lamStar ∧ IsGLB {lam : ℝ | 1 ≤ lam ∧ LamFeasible p s lam} lamStar ∧
       IsGLB {C : ℝ | 0 < C ∧ HVIneqLp p s C} (lamStar ^ (1 / p) * hvConst p s) :=
   truec_formula hp1 hp2 hs hsS (hv_finite hp1 hp2 hs)
-    fun C hC hHV => Cited.mm2022_lower_bound p s hp1 hp2 hs C hC hHV
+    fun C hC hHV => R572.mm2022_lower_bound_one p s hp1 hp2 hs C hC hHV
 
 end Truec
 

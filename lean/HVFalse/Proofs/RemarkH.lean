@@ -1,5 +1,5 @@
 /-
-  HVFalse/Proofs/RemarkH.lean - Remark 6 (paper l.381-384): H changes sign at p = 4/3
+  HVFalse/Proofs/RemarkH.lean - Remark 6 (paper l.399-403): H changes sign at p = 4/3
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
   The paper: "By the proof above, H = 0 and dH/dp > 0 at p = 4/3, so H < 0 on an interval (4/3 - ε, 4/3)."

@@ -64,7 +64,7 @@ theorem jag_bounds_C :
   exact ⟨mul_le_mul l3 lc (by norm_num) (sqrt_nonneg 3),
     mul_le_mul u3 uc (sqrt_nonneg _) (by norm_num)⟩
 
-/-- C15a, l.499: Jaguzović's point `(log 2, π/2)` at `(p,s) = (3/2, 4)`: `Γ - e = -1.3102·10⁻³` to within `5·10⁻⁸`. -/
+/-- C15a, l.410-411: Jaguzović's point `(log 2, π/2)` at `(p,s) = (3/2, 4)`: `Γ - e = -1.3102·10⁻³` to within `5·10⁻⁸`. -/
 theorem jaguzovic_point :
     |Gam (3 / 2) 4 (log 2) (π / 2) - ee (3 / 2) (π / 2) - (-13102 / 10 ^ 7)| ≤ 5 / 10 ^ 8 := by
   rw [jag_closed_form, abs_le]

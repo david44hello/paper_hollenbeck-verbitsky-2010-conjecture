@@ -143,3 +143,11 @@ import HVFalse.Paper.ComputerChecked
 #print axioms P18.Paper.C06f_trigConvex_qsubtrig
 #print axioms P18.Paper.C13v_arc_integrable
 #print axioms P18.Paper.C13w_arc_integral
+#print axioms P18.Paper.C04j_gam_phi
+#print axioms P18.Paper.C04k_mm_bound
+#print axioms P18.Paper.C04l_mm_rhs
+#print axioms P18.Paper.C04m_best_gt_above_sec
+#print axioms P18.Paper.C13f2_exponent_values
+#print axioms P18.Paper.C13g2_eta_middle
+#print axioms P18.Paper.C15e_three_times
+#print axioms P18.Paper.C16i_idea_cole_iff

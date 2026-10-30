@@ -12,7 +12,7 @@ open Real
 namespace P18
 
 /-- A finite Blaschke product with zeros `zs` (each `0 < |a| < 1` is assumed where used):
-`B(ζ) = ∏_a (ζ - a) / (1 - ā ζ)`. Paper l.268-269 (Lemma 3: "the Blaschke product of the zeros of g"). -/
+`B(ζ) = ∏_a (ζ - a) / (1 - ā ζ)`. Paper l.273-274 (Lemma 3: "the Blaschke product of the zeros of g"). -/
 noncomputable def blaschke (zs : List ℂ) (ζ : ℂ) : ℂ :=
   (zs.map fun a => (ζ - a) / (1 - (starRingEnd ℂ) a * ζ)).prod
 

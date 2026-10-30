@@ -1,5 +1,5 @@
 /-
-  HVFalse/Proofs/Prop8Steps.lean - Prop. 8 (paper l.450-451): two hand steps behind the integral of `G` over the circle
+  HVFalse/Proofs/Prop8Steps.lean - Prop. 8 (paper l.477-478): two hand steps behind the integral of `G` over the circle
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
   For the explicit pair: (c) on each of the three open arcs, `G(z, w) = |zw|^q Γ(y_j, t_j)` with `q = p/2 = 3/4`;

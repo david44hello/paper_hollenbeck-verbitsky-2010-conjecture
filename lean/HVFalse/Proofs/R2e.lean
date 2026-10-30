@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/R2e.lean - `|zw|^q` is integrable on each of the three arcs,
-  and the integral identity `∫ G = Σ_j Γ_j ∫_{arc_j} |zw|^q` (Prop. 8 proof, l.449-452)
+  and the integral identity `∫ G = Σ_j Γ_j ∫_{arc_j} |zw|^q` (Prop. 8 proof, l.476-479)
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 -/
 import HVFalse.Proofs.Prop8Steps
@@ -150,7 +150,7 @@ theorem P_arcs {δ x y z : ℝ} (hδ0 : 0 < δ) (hδ1 : δ ≤ 1) (hx0 : 0 ≤ x
     exact hs.continuousOn_mul hc
   exact ⟨p1.trans p2, p3.trans p4, p5.trans p6⟩
 
-/-- Prop. 8 proof (l.451-452): `|zw|^q` (`q = 3/4`, the explicit pair at `δ = e^{-2500}`) is
+/-- Prop. 8 proof (l.478-479): `|zw|^q` (`q = 3/4`, the explicit pair at `δ = e^{-2500}`) is
 interval integrable on each of the three arcs `(-π, -δ/2)`, `(-δ/2, δ/2)`, `(δ/2, π)` ("integrable power singularities"):
 by C13q it equals `Π_k |2 sin((θ - θ_k)/2)|^(-qα_k)` off the two points `±δ/2`, with `0 < qα_k < 1` (C13f). -/
 theorem C13v_arc_integrable :
@@ -184,7 +184,7 @@ theorem C13v_arc_integrable :
   · rw [uIoo_of_le (by linarith)] at hθ
     exact hEq θ ⟨by linarith [hθ.1], hθ.2⟩ (by linarith [hθ.1] : -(δ / 2) < θ).ne' hθ.1.ne'
 
-/-- The integral identity (l.449-450): "the integral is `Σ_j Γ(y_j,t_j) ∫_{arc_j} |zw|^q`",
+/-- The integral identity (l.476-477): "the integral is `Σ_j Γ(y_j,t_j) ∫_{arc_j} |zw|^q`",
 over `T` as `(-π, π)` (the common factor `1/2π` is dropped on both sides): C13p on the open arcs, `C13v_arc_integrable`. -/
 theorem C13w_arc_integral :
     let δ := Real.exp (-2500)

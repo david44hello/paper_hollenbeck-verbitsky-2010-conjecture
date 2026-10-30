@@ -13,8 +13,8 @@
         2 sin(qh) sin(qπ) v_j (summation by parts; the second difference of K vanishes off the kink). Then
         |ζ|^q K(arg ζ - μ) = U(ζ e^{-iμ}) / tanϑ with U = ThmBIf.Ufun (2q) subharmonic (LocGlob.Ufun_subharmonic, no textbook fact), a
         rotation keeps the sub-mean-value inequality (circle averages are rotation invariant: `circleAverage_rotate`), and
-        a nonnegative sum of continuous functions with the sub-mean-value inequality has it too. (The paper: "derivative
-        jump ≥ 0, so q-subtrigonometric".)
+        a nonnegative sum of continuous functions with the sub-mean-value inequality has it too. (The paper, l.646-647: "If these
+        jumps are nonnegative, then μ ... is a sum of nonnegative point masses at the nodes, and φ is q-subtrigonometric".)
 -/
 import HVFalse.Proofs.Bridges
 import HVFalse.Proofs.Sector
@@ -73,13 +73,13 @@ theorem den_pos {q : ℝ} {N : ℕ} (hq0 : 0 < q) (hq1 : q < 1) (hN : 2 ≤ N) :
 
 /-! ## C23b, C23d, C23e -/
 
-/-- **C23b** (paper l.639-646), for `q = p/2 ∈ (1/2, 1)`: a q-subtrigonometric `φ` satisfies the discrete inequality at every
+/-- **C23b** (paper l.641-643), for `q = p/2 ∈ (1/2, 1)`: a q-subtrigonometric `φ` satisfies the discrete inequality at every
 step `h` with `2qh < π`. -/
 theorem qsubtrig_discrete {q h : ℝ} (hq0 : 1 / 2 < q) (hq1 : q < 1) (hh : 0 < h) (h2 : 2 * q * h < π) {φ : ℝ → ℝ}
     (hφ : QSubtrig q φ) (t : ℝ) : 2 * cos (q * h) * φ t ≤ φ (t + h) + φ (t - h) :=
   discrete_of_trigConvex (by linarith) hh h2 (Sector.qsubtrig_trigConvex hq0 hq1 hφ) t
 
-/-- **C23d** (paper l.645-646): a feasible `λ` of the continuous problem is feasible on `N ≥ 4` nodes (`λ_{*,N} ≤ λ_*`). -/
+/-- **C23d** (paper l.643): a feasible `λ` of the continuous problem is feasible on `N ≥ 4` nodes (`λ_{*,N} ≤ λ_*`). -/
 theorem discrete_relaxation {p s lam : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) {N : ℕ} (hN : 4 ≤ N)
     (hf : LamFeasible p s lam) : DiscFeasible p s lam N := by
   obtain ⟨φ, hφ, hle⟩ := hf
@@ -98,7 +98,7 @@ theorem discrete_relaxation {p s lam : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 
     rw [node_succ, node_pred]
     exact qsubtrig_discrete (by linarith) (by linarith) hh h2 hφ _
 
-/-- **C23e** (paper l.652-653): a feasible `2N`-node vector restricts to a feasible `N`-node vector (`λ_{*,N} ≤ λ_{*,2N}`). -/
+/-- **C23e** (paper l.649-652): a feasible `2N`-node vector restricts to a feasible `N`-node vector (`λ_{*,N} ≤ λ_{*,2N}`). -/
 theorem nested_grids {p s lam : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) {N : ℕ} (hN : 4 ≤ N)
     (hf : DiscFeasible p s lam (2 * N)) : DiscFeasible p s lam N := by
   obtain ⟨v, hper, hdisc, hob⟩ := hf
@@ -492,7 +492,7 @@ theorem kernC_eq {q : ℝ} {N : ℕ} (hq : 0 < q) (i : ℕ) (ζ : ℂ) :
   · rw [norm_mul, Complex.norm_exp_ofReal_mul_I, mul_one, arg_mul_exp hζ, ← sub_eq_add_neg]
     ring
 
-/-- **C23a** (paper l.646-650): the interpolant of `N`-periodic node values with the discrete inequality, by solutions of
+/-- **C23a** (paper l.644-649): the interpolant of `N`-periodic node values with the discrete inequality, by solutions of
 `φ'' + q²φ = 0` on each cell, is q-subtrigonometric. -/
 theorem interp_qsubtrig {q : ℝ} (hq0 : 1 / 2 < q) (hq1 : q < 1) {N : ℕ} (hN : 2 ≤ N) {v : ℤ → ℝ}
     (hper : ∀ i : ℤ, v (i + N) = v i) (hdisc : ∀ i : ℤ, 2 * cos (q * (2 * π / N)) * v i ≤ v (i + 1) + v (i - 1)) :

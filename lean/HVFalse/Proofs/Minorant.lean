@@ -13,7 +13,7 @@ open Real Filter Topology
 
 namespace P18
 
-/-- C16b, l.180-181: `E = tan ϑ · Re (zw)^q` (principal power). -/
+/-- C16b, l.187-189: `E = tan ϑ · Re (zw)^q` (principal power). -/
 theorem Efun_eq_re {p : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (z w : ℂ) :
     Efun p z w = tan (π / (2 * p)) * ((z * w) ^ ((p / 2 : ℝ) : ℂ)).re := by
   have hq : (p / 2 : ℝ) ≠ 0 := by
@@ -63,7 +63,7 @@ theorem exists_add_ofReal_ne_zero (z : ℂ) : ∃ δ > 0, ∀ ε : ℝ, 0 < ε �
     rw [hzε, norm_neg, Complex.norm_real, Real.norm_eq_abs, abs_of_pos hε] at hεz
     exact lt_irrefl _ hεz
 
-/-- C16c, l.191: (eq:two) gives `E ≤ G` everywhere. -/
+/-- C16c, l.324: (eq:two) gives `E ≤ G` everywhere. -/
 theorem Efun_le_G {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) (h2 : TwoVar p s) (z w : ℂ) :
     Efun p z w ≤ G p s z w := by
   have hp : 0 < p := by linarith

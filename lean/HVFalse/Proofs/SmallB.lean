@@ -23,7 +23,7 @@ namespace P18
 
 /-! ## Exact values -/
 
-/-- C24, l.327: at `p = 3/2`: `u = 3`, `K = 1/2`, `H = 1` and `Q₄ = -3/32`. -/
+/-- C24, l.344: at `p = 3/2`: `u = 3`, `K = 1/2`, `H = 1` and `Q₄ = -3/32`. -/
 theorem three_halves_values :
     uu (3 / 2) = 3 ∧ K (3 / 2) (uu (3 / 2)) = 1 / 2 ∧ H (3 / 2) (uu (3 / 2)) = 1 ∧ Acoef (3 / 2) = -3 / 32 := by
   have e : π / (2 * (3 / 2 : ℝ)) = π / 3 := by ring
@@ -33,18 +33,18 @@ theorem three_halves_values :
   · rw [hu]; unfold K; norm_num
   · rw [hu]; unfold H; norm_num
 
-/-- C10a6, l.364-365: `H(4/3, u(4/3)) = 0` (`u(4/3) = tan²(3π/8) = 3 + 2√2`, a root of `u² - 6u + 1`). -/
+/-- C10a6, l.386-387: `H(4/3, u(4/3)) = 0` (`u(4/3) = tan²(3π/8) = 3 + 2√2`, a root of `u² - 6u + 1`). -/
 theorem H_at_four_thirds : H (4 / 3) (uu (4 / 3)) = 0 := by
   have e : π / (2 * (4 / 3 : ℝ)) = 3 * π / 8 := by ring
   have hu : uu (4 / 3) = 3 + 2 * √2 := by
     unfold uu; rw [e]; exact tan_three_pi_div_eight_sq
   rw [hu, H_four_thirds, u43_root, mul_zero]
 
-/-- C13a, l.420: `w(0) = 0`. -/
+/-- C13a, l.450: `w(0) = 0`. -/
 theorem explicit_w0 (δ : ℝ) : Explicit.wf δ 0 = 0 := by
   simp [Explicit.wf]
 
-/-- C13d, l.427: `zw = e^{iγ} ζ Π²`. -/
+/-- C13d, l.457: `zw = e^{iγ} ζ Π²`. -/
 theorem explicit_product (δ : ℝ) (ζ : ℂ) :
     Explicit.zf δ ζ * Explicit.wf δ ζ =
       Complex.exp (Complex.I * ((Explicit.gam δ : ℝ) : ℂ)) * ζ * Explicit.Pi δ ζ ^ 2 := by
@@ -70,7 +70,7 @@ theorem explicit_exps_eq :
   refine ⟨hA, hB, ?_⟩
   unfold Explicit.aC; rw [hA, hB]; ring
 
-/-- C13f, l.443: `qα₋, qα₊, qα_π < 1` (`q = 3/4`). -/
+/-- C13f, l.472: `qα₋, qα₊, qα_π < 1` (`q = 3/4`). -/
 theorem explicit_exponents : 3 / 4 * Explicit.aA < 1 ∧ 3 / 4 * Explicit.aB < 1 ∧ 3 / 4 * Explicit.aC < 1 := by
   obtain ⟨hA, hB, hC⟩ := explicit_exps_eq
   have hx0 : 0 < 1 / π := by positivity
@@ -78,7 +78,7 @@ theorem explicit_exponents : 3 / 4 * Explicit.aA < 1 ∧ 3 / 4 * Explicit.aB < 1
   rw [hA, hB, hC]
   refine ⟨by nlinarith, by nlinarith, by nlinarith⟩
 
-/-- C13g, l.470: `ξ = qα_A + qα_B - 1 = 0.0032468 > 0` (5 significant digits); `ξ = (102/10000)/π`. -/
+/-- C13g, l.498: `ξ = qα_A + qα_B - 1 = 0.0032468 > 0` (5 significant digits); `ξ = (102/10000)/π`. -/
 theorem explicit_e1 :
     0 < 3 / 4 * Explicit.aA + 3 / 4 * Explicit.aB - 1 ∧
       |3 / 4 * Explicit.aA + 3 / 4 * Explicit.aB - 1 - 32468 / 10 ^ 7| ≤ 5 / 10 ^ 8 := by
@@ -94,7 +94,7 @@ theorem explicit_e1 :
 /-! ## Signs -/
 
 open SaddleSigns in
-/-- C10c4, l.370-372: `K > 0` on all of `(1, 2)` (the Jordan argument for `K_pos` needs only `1 < p`). -/
+/-- C10c4, l.373-375: `K > 0` on all of `(1, 2)` (the Jordan argument for `K_pos` needs only `1 < p`). -/
 theorem K_pos_wide {p : ℝ} (hp1 : 1 < p) (hp2 : p < 2) : 0 < K p (uu p) := by
   have hp0 : 0 < p := by linarith
   have hd := denom_pos p hp1 hp2
@@ -104,7 +104,7 @@ theorem K_pos_wide {p : ℝ} (hp1 : 1 < p) (hp2 : p < 2) : 0 < K p (uu p) := by
   have e : p * (2 / p - 1) = 2 - p := by field_simp
   linarith
 
-/-- C10b3, l.326-327, l.354-356: `Γ < e` on the valley for small `y ≠ 0` (from `Γ - e = Q₄ y⁴ + O(y⁶)` and `Q₄ < 0`). -/
+/-- C10b3, l.342-344, l.375-377: `Γ < e` on the valley for small `y ≠ 0` (from `Γ - e = Q₄ y⁴ + O(y⁶)` and `Q₄ < 0`). -/
 theorem valley_negative {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) :
     ∃ δ : ℝ, 0 < δ ∧ ∀ y : ℝ, y ≠ 0 → |y| < δ →
       Gam p (Ssec p) y (π / p - valleyC p * y ^ 2) < ee p (π / p - valleyC p * y ^ 2) := by
@@ -133,7 +133,7 @@ theorem valley_negative {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) :
   have h8 : Acoef p * y ^ 4 < 0 := mul_neg_of_neg_of_pos hA hy4
   linarith
 
-/-- C04d, l.197-204: `s₀(p) ≤ sec²ϑ`, `s₀(p) ≥ p/(p-1)` for `4/3 < p < 2` [Jag2026], `s₀(p) = sec²ϑ` for `p ≤ 4/3`
+/-- C04d, l.205-211: `s₀(p) ≤ sec²ϑ`, `s₀(p) ≥ p/(p-1)` for `4/3 < p < 2` [Jag2026], `s₀(p) = sec²ϑ` for `p ≤ 4/3`
 [Mel2023, (37)]. -/
 theorem threshold_bounds {p s0 : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs0 : ∀ s : ℝ, 0 < s → (TwoVar p s ↔ s ≤ s0)) :
     s0 ≤ Ssec p ∧ (4 / 3 < p → p / (p - 1) ≤ s0) ∧ (p ≤ 4 / 3 → s0 = Ssec p) := by
@@ -159,7 +159,7 @@ theorem feasible_upset {p s lam lam' : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 
   have := mul_le_mul_of_nonneg_right hll hT
   linarith
 
-/-- C13k (first part), l.429: `Γ(0, -2π/3) = 0` at `p = 3/2` (a contact point, `2π/3 = π/p`). -/
+/-- C13k (first part), l.459: `Γ(0, -2π/3) = 0` at `p = 3/2` (a contact point, `2π/3 = π/p`). -/
 theorem explicit_arc_contact : Gam (3 / 2) (398 / 100) 0 (-(2 * π / 3)) = 0 := by
   rw [show 2 * π / 3 = π / (3 / 2) by ring]
   exact gam_contact_neg (3 / 2) (398 / 100) (by norm_num) (by norm_num)
@@ -219,7 +219,7 @@ theorem abs_sub_le_of_encl {v lo hi c e : ℝ} (h : lo ≤ v ∧ v ≤ hi) (h1 :
     |v - c| ≤ e :=
   abs_le.mpr ⟨by linarith [h.1], by linarith [h.2]⟩
 
-/-- C12c, l.401: `Γ - e ∈ -4.17314647396549·10⁻⁴ + [-10⁻¹⁸, 10⁻¹⁸]` at `p = 3/2, s = 3.98, y = log(9/5), t = π/2`
+/-- C12c, l.420: `Γ - e ∈ -4.17314647396549·10⁻⁴ + [-10⁻¹⁸, 10⁻¹⁸]` at `p = 3/2, s = 3.98, y = log(9/5), t = π/2`
 (25-digit rational bounds of each term of the closed form). -/
 theorem point_enclosure :
     |Gam (3 / 2) (398 / 100) (log (9 / 5)) (π / 2) - ee (3 / 2) (π / 2) - (-417314647396549 / 10 ^ 18)| ≤ 1 / 10 ^ 18 := by
@@ -259,7 +259,7 @@ theorem jag_closed_form_s (s : ℝ) :
   rw [hq, hb]
   ring
 
-/-- C15c (second part), l.500: at Jaguzović's point, `Γ - e = -1.398·10⁻⁴` at `s = 3.98` (within `5·10⁻⁸`). -/
+/-- C15c (second part), l.411: at Jaguzović's point, `Γ - e = -1.398·10⁻⁴` at `s = 3.98` (within `5·10⁻⁸`). -/
 theorem jaguzovic_value_398 :
     |Gam (3 / 2) (398 / 100) (log 2) (π / 2) - ee (3 / 2) (π / 2) - (-1398 / 10 ^ 7)| ≤ 5 / 10 ^ 8 := by
   have hA := rpow_encl (x := 5 / 2) (lo := (994088410958813 / 500000000000000 : ℝ)) (hi := (1988176821917627 / 1000000000000000 : ℝ)) (m := 3) (n := 4)
@@ -298,7 +298,7 @@ theorem jaguzovic_neg_39777 : Gam (3 / 2) (39777 / 10000) (log 2) (π / 2) - ee 
     show (3 / 2 : ℝ) / (39777 / 10000) = 5000 / 13259 by norm_num]
   exact lt_of_le_of_lt key.2 (by norm_num)
 
-/-- C15c (first part), l.500: at Jaguzović's point, `Γ < e` for every `s ∈ (3.9777, 4]` (`Γ` decreases in `s`). -/
+/-- C15c (first part), l.411: at Jaguzović's point, `Γ < e` for every `s ∈ (3.9777, 4]` (`Γ` decreases in `s`). -/
 theorem jaguzovic_range_lt :
     ∀ s : ℝ, 39777 / 10000 < s → s ≤ 4 → Gam (3 / 2) s (log 2) (π / 2) < ee (3 / 2) (π / 2) := by
   intro s hs _
@@ -310,7 +310,7 @@ def PropFailIcc : Prop :=
   ∀ {p s : ℝ}, 1 < p → p < 2 → 0 < s → s ≤ Ssec p →
     (∃ y t : ℝ, t ∈ Icc (-π) π ∧ Gam p s y t < ee p t) → ¬ HVIneq p s (hvConst p s)
 
-/-- C15c, l.499-502, from Prop. fail (C09): all three parts; the third is (HV) failing for every `s ∈ [3.978, 4]`. -/
+/-- C15c, l.410-412, from Prop. fail (C09): all three parts; the third is (HV) failing for every `s ∈ [3.978, 4]`. -/
 theorem jaguzovic_range_of_fail (h9 : PropFailIcc) :
     (∀ s : ℝ, 39777 / 10000 < s → s ≤ 4 → Gam (3 / 2) s (log 2) (π / 2) < ee (3 / 2) (π / 2)) ∧
       |Gam (3 / 2) (398 / 100) (log 2) (π / 2) - ee (3 / 2) (π / 2) - (-1398 / 10 ^ 7)| ≤ 5 / 10 ^ 8 ∧
@@ -387,7 +387,7 @@ theorem explicit_arc_closed_form :
     show (3 / 2 : ℝ) / 2 = 3 / 4 by norm_num, show (398 / 100 : ℝ) * (4865 / 10000) / 2 = 193627 / 200000 by norm_num,
     show (3 / 2 : ℝ) / (398 / 100) = 75 / 199 by norm_num, show (3 / 4 : ℝ) * (179 / 100) = 537 / 400 by norm_num]
 
-/-- C13k (second part), l.484: `Γ(y₂,t₂) - e(t₂) = -7.7·10⁻⁴` (2 digits: within `5·10⁻⁶`) at `(p, s) = (3/2, 3.98)`
+/-- C13k (second part), l.504-505: `Γ(y₂,t₂) - e(t₂) = -7.7·10⁻⁴` (2 digits: within `5·10⁻⁶`) at `(p, s) = (3/2, 3.98)`
 (true value `-7.68887·10⁻⁴`; 12-digit Taylor bounds of `exp`, `cos`). -/
 theorem explicit_arc_value :
     |Gam (3 / 2) (398 / 100) Explicit.y2 Explicit.tS - ee (3 / 2) Explicit.tS - (-77 / 10 ^ 5)| ≤ 5 / 10 ^ 6 := by
@@ -435,7 +435,7 @@ theorem explicit_arc_value :
     (hi := (389551917317 / 250000000000 : ℝ) - (583490807989 / 500000000000 : ℝ) - (108253175473 / 62500000000 : ℝ) * (226318384121 / 1000000000000 : ℝ))
     ⟨by linarith [hF.1, hT.2, hR2], by linarith [hF.2, hT.1, hR1]⟩ (by norm_num) (by norm_num)
 
-/-- C13k, l.429, l.484: `Γ(0, -2π/3) = 0` and `Γ(y₂,t₂) - e(t₂) = -7.7·10⁻⁴` (within `5·10⁻⁶`) at `(3/2, 3.98)`. -/
+/-- C13k, l.459, l.504-505: `Γ(0, -2π/3) = 0` and `Γ(y₂,t₂) - e(t₂) = -7.7·10⁻⁴` (within `5·10⁻⁶`) at `(3/2, 3.98)`. -/
 theorem explicit_arc_values :
     Gam (3 / 2) (398 / 100) 0 (-(2 * π / 3)) = 0 ∧
       |Gam (3 / 2) (398 / 100) Explicit.y2 Explicit.tS - ee (3 / 2) Explicit.tS - (-77 / 10 ^ 5)| ≤ 5 / 10 ^ 6 :=

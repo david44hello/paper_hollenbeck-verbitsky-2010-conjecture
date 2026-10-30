@@ -100,7 +100,7 @@ theorem g_eq (δ : ℝ) {ξ : ℂ} (hξ : ‖ξ‖ < 1) :
   linear_combination (ξ * exp (I * ((Explicit.gam δ / 2 : ℝ) : ℂ)) * exp (I * ((Explicit.gam δ / 2 : ℝ) : ℂ))
     * exp (M δ ξ) * exp (M δ ξ)) * hY
 
-/-- l.462-464: "`Re(ξg'/g) = 1 + Σ_k α_k Re(ω_k/(1-ω_k)) > 1 - ½Σ_k α_k = 0`, so `g` is starlike", for
+/-- l.490-492: "`Re(ξg'/g) = 1 + Σ_k α_k Re(ω_k/(1-ω_k)) > 1 - ½Σ_k α_k = 0`. Hence `g` is starlike", for
 `g = zw` and every `δ`. -/
 theorem C13t_starlike (δ : ℝ) : ∀ ζ ∈ Metric.ball (0 : ℂ) 1, ζ ≠ 0 →
     0 < (ζ * deriv (fun ξ => Explicit.zf δ ξ * Explicit.wf δ ξ) ζ / (Explicit.zf δ ζ * Explicit.wf δ ζ)).re := by

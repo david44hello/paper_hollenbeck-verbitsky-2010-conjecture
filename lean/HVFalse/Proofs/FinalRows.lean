@@ -2,14 +2,14 @@
   HVFalse/Proofs/FinalRows.lean - rows added at the final paper version (proofs only; imported only by Paper/Statements)
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
-  C20e / C20a_full_given_cells (Prop. 11, l.572-579): for every cell and every s with 0 ≤ L(p_b) - s < 2·10⁻⁶ (the certificate's
+  C20e / C20a_full_given_cells (Prop. 11, l.575-582): for every cell and every s with 0 ≤ L(p_b) - s < 2·10⁻⁶ (the certificate's
   s_cell is such an s), p/(p-1) < s on the whole cell, in particular p_a/(p_a - 1) < s. From NewRows11b.frac_ge: the
   certified part of the window, (s - p/(p-1))/(sec²(π/2p) - p/(p-1)), is at least 16%, and the window has positive length.
-  C08 zeros (Lemma lift, l.267-272): zw = g on the closed disc, so at a zero ζ of g with |ζ| = 1, z(ζ)w(ζ) = 0. Here
+  C08 zeros (Lemma lift, l.272-277): zw = g on the closed disc, so at a zero ζ of g with |ζ| = 1, z(ζ)w(ζ) = 0. Here
   w = ζ^k r e^{-Y/2} and z = B r e^{Y/2}, with ζ^k, e^{±Y/2} and B(ζ) nonzero (each Blaschke factor (ζ - a)/(1 - āζ),
   |a| < 1 = |ζ|, is nonzero), so r(ζ) = 0, hence z(ζ) = w(ζ) = 0 and G(z,w) = G(0,0) = 0.
-  C19e (Prop. 10, l.545-547): s₀(p) < s₊(p) at the six p, from the proved failure points (no computer part).
-  C13n (Prop. 8, l.424): the stated claim C13m (f violates (HV)) implies that (HV) with C = C_HV fails at (3/2, 3.98).
+  C19e (Prop. 10, l.546-548): s₀(p) < s₊(p) at the six p, from the proved failure points (no computer part).
+  C13n (Prop. 8, l.454): the stated claim C13m (f violates (HV)) implies that (HV) with C = C_HV fails at (3/2, 3.98).
 -/
 import HVFalse.Proofs.Lift
 import HVFalse.Proofs.NewRows11c

@@ -19,7 +19,7 @@ namespace P18.Cited
 /-- [HKV2003, Theorem 2.1 (Cole), p. 242], VERBATIM: "Suppose F : C → [−∞, ∞) is an upper semicontinuous function and E is a
 nonempty subset of C. Then in order that we have the inequality ∫₀^{2π} F∘f(e^{iθ}) dθ/2π ≥ 0 (2.1) whenever f is a polynomial
 with f(0) ∈ E, it is necessary and sufficient that there exists a subharmonic function G with G(z) ≤ F(z) for z ∈ C and
-G(z) ≥ 0 for z ∈ E." The paper quotes it with E = {0} ("for polynomials vanishing at 0").
+G(z) ≥ 0 for z ∈ E." The paper quotes it with E = {0} ("applied to polynomials vanishing at 0", l.301).
 This axiom is the direction "(2.1) for every such f ⇒ such a G exists"; nothing about homogeneity. -/
 axiom hkv_thm21 (F : ℂ → EReal) (hF : UpperSemicontinuous F) (hFtop : ∀ z, F z ≠ ⊤) (E : Set ℂ) (hE : E.Nonempty)
     (h21 : ∀ f : Polynomial ℂ, f.eval 0 ∈ E →

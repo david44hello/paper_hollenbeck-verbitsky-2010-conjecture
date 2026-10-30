@@ -195,7 +195,7 @@ theorem twoVar_exists {p : ℝ} (hp1 : 1 < p) (hp2 : p < 2) : ∃ s, 0 < s ∧ T
 
 /-! ### (E): the threshold -/
 
-/-- C04b, l.195-197: (eq:two) holds exactly for `s ∈ (0, s₀(p)]`, for some `s₀(p) > 0`. -/
+/-- C04b, l.204-205: (eq:two) holds exactly for `s ∈ (0, s₀(p)]`, for some `s₀(p) > 0`. -/
 theorem twoVar_threshold {p : ℝ} (hp1 : 1 < p) (hp2 : p < 2) :
     ∃ s0 : ℝ, 0 < s0 ∧ ∀ s : ℝ, 0 < s → (TwoVar p s ↔ s ≤ s0) := by
   have hp : 0 < p := by linarith

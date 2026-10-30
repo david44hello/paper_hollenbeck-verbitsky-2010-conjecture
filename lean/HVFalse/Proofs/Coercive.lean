@@ -72,7 +72,7 @@ theorem coeff_key {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) (hsS : s 
       rw [div_mul_eq_mul_div, one_mul, div_lt_iff₀ (by positivity)]
       linarith
 
-/-- C03 (a), paper l.205-208: the coefficient `(2 cos ϑ)^(-p) - 2^(-p/s)` of `e^{q|y|}` is positive for `0 < s ≤ sec²ϑ`. -/
+/-- C03 (a), paper l.216-219: the coefficient `(2 cos ϑ)^(-p) - 2^(-p/s)` of `e^{q|y|}` is positive for `0 < s ≤ sec²ϑ`. -/
 theorem coeff_pos {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) (hsS : s ≤ 1 / cos (π / (2 * p)) ^ 2) :
     0 < (2 * cos (π / (2 * p))) ^ (-p) - 2 ^ (-p / s) := by
   have key := coeff_key hp1 hp2 hs hsS

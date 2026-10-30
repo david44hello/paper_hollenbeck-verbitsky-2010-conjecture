@@ -1,9 +1,28 @@
-# The Hollenbeck–Verbitsky (2010) conjecture is false: the Lean proof
+# The Hollenbeck–Verbitsky (2010) conjecture is false — Lean 4 proof
 
-Dave Goel. Copyright (C) Dave Goel 2026--now. All rights reserved.
+The paper: its link will be added here when it is posted.
 
-This folder is the Lean 4 proof. It proves all results of the paper, Theorems A and B included, except the statements that rest on the programs in `../programs/`: the enclosure of the integral in Proposition 8, and the instances of inequality (3) and of its failure behind Propositions 10 (lower bounds), 11 and 13. Lean states these and proves the rest from them; the instances also use the short hand arguments of Section 6 of the paper and the bound L(p) < sec²(π/2p) on each cell, which Lean does not prove either. It also leaves out a side remark after Proposition 8, which the proof does not use: that the map g is univalent and maps the disc onto the plane minus three slits (Lean proves that g is starlike). It assumes only the published results cited in the paper; `AUDIT.md` lists them, and `HVFalse/Cited/` quotes each one from its source. `AUDIT.md` gives each of the 146 claims of the paper with its status in Lean: 103 proved, 26 proved from the cited results, 9 proved given a computer check, and 8 statements not proved in Lean by themselves. `AUDIT_NOTES.md` lists what is not formalized and the values the paper calls numerical, not certified.
+This folder is a Lean 4 proof of the paper's results.
 
-The log files named in this folder (logs/...) are in ../programs/logs/.
+## Directions to Reproduce
 
-Build, from this folder: `lake exe cache get && lake build` (Lean 4 v4.35.0, Mathlib commit 56a005855ea1).
+Install Git, Lean (https://lean-lang.org/install/), Python 3 and ripgrep, then run:
+
+```bash
+git clone https://github.com/david44hello/paper_hollenbeck-verbitsky-2010-conjecture.git
+cd paper_hollenbeck-verbitsky-2010-conjecture/lean
+./check.sh
+```
+
+Its last line looks like:
+
+```
+AUDIT: 150 paper claims (+ 3 Lean-only helpers, 3 retired rows). PROVED: 104, PROVED (LEAN-ONLY HELPER): 3, PROVED (RETIRED): 3, PROVED GIVEN A COMPUTER CHECK: 6, PROVED-FROM-CITED: 29, PROVED-FROM-CITED GIVEN A COMPUTER CHECK: 3, NOT PROVED (computer-checked): 7, NOT PROVED by itself; PROVED GIVEN C13c (row C13m_given_C13c; C13c is checked by computer): 1 (+ 3 box parts). Table: .../AUDIT.md
+```
+
+29 claims are proved from results that the paper cites. 17 rest on the computer checks in
+[../programs/](../programs/): 9 are proved given them, and 8 are stated in Lean but not proved by themselves.
+[AUDIT.md](AUDIT.md) names them, claim by claim. The logs that the Lean files name (`logs/...`) are in
+[../programs/logs/](../programs/logs/).
+
+Copyright (C) Dave Goel 2026--now. All rights reserved.

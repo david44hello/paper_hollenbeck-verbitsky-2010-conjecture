@@ -34,7 +34,7 @@ every complex line `λ ↦ a + λ b`. -/
 def IsPSH (u : ℂ × ℂ → EReal) : Prop :=
   (∀ x, u x ≠ ⊤) ∧ UpperSemicontinuous u ∧ ∀ a b : ℂ × ℂ, IsSubharmonic (fun l : ℂ => u (a + l • b))
 
-/-- Paper l.222-223: a `2π`-periodic finite `φ` is q-subtrigonometric if `|ζ|^q φ(arg ζ)` is subharmonic on ℂ
+/-- Paper l.235-236: a `2π`-periodic finite `φ` is q-subtrigonometric if `|ζ|^q φ(arg ζ)` is subharmonic on ℂ
 (at `ζ = 0` the function is `0^q φ(0) = 0`, `q > 0`). -/
 def QSubtrig (q : ℝ) (φ : ℝ → ℝ) : Prop :=
   Function.Periodic φ (2 * π) ∧ IsSubharmonic (fun ζ : ℂ => ((‖ζ‖ ^ q * φ (Complex.arg ζ) : ℝ) : EReal))

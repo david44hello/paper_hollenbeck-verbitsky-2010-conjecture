@@ -1,5 +1,5 @@
 /-
-  HVFalse/Proofs/HandStep.lean - C13m_hand_step: the hand step of Prop. 8 (l.444-446) from C13b and C13c to C13m
+  HVFalse/Proofs/HandStep.lean - C13m_hand_step: the hand step of Prop. 8 (l.473-474) from C13b and C13c to C13m
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
   Route: at the regular points of the circle `z`, `w` (and `u = w/ζ`) are continuous, so they are the radial limits;
@@ -311,7 +311,7 @@ theorem lim_uf {δ : ℝ} (hδ0 : 0 < δ) (hδ1 : δ < 2 * π) : ∀ᵐ θ : ℝ
     ⟨tendsto_radial (differentiableAt_uf (good_of_regular (Complex.norm_exp_ofReal_mul_I θ) hreg)).continuousAt,
       fun _ hr0 hr1 => norm_uf_radial_le hδ0 hδ1 (Complex.norm_exp_ofReal_mul_I θ) hreg hr0 hr1⟩
 
-/-- `ẑ(n) = 0` for `n < 0` (l.445: "the Fourier coefficients of `z` vanish for `n < 0`"). -/
+/-- `ẑ(n) = 0` for `n < 0` (l.473: "the Fourier coefficients of `z` vanish for `n < 0`"). -/
 theorem zf_coeff_neg {δ : ℝ} (hδ0 : 0 < δ) (hδ1 : δ < 2 * π) {n : ℤ} (hn : n < 0) :
     fourierCoeff (Paper.onT (Explicit.zf δ)) n = 0 := by
   have hm1 : 1 ≤ (-n).toNat := by omega
@@ -334,7 +334,7 @@ theorem intervalIntegral_conj (F : ℝ → ℂ) :
   rw [intervalIntegral.integral_of_le two_pi_pos.le, intervalIntegral.integral_of_le two_pi_pos.le]
   exact integral_conj
 
-/-- `(w̄)^(n) = 0` for `n ≥ 0` (l.445: "those of `w̄` vanish for `n ≥ 0`"; `w = ζu`, `w(0) = 0`). -/
+/-- `(w̄)^(n) = 0` for `n ≥ 0` (l.473-474: "those of `w̄` for `n ≥ 0`"; `w = ζu`, `w(0) = 0`). -/
 theorem wbar_coeff_nonneg {δ : ℝ} (hδ0 : 0 < δ) (hδ1 : δ < 2 * π) {n : ℤ} (hn : 0 ≤ n) :
     fourierCoeff (Paper.onT fun ζ => (starRingEnd ℂ) (Explicit.wf δ ζ)) n = 0 := by
   obtain ⟨m, rfl⟩ := Int.eq_ofNat_of_zero_le hn
@@ -502,9 +502,9 @@ theorem C13c_integral_neg (hc : Paper.C13c_explicit_integral) :
       (Explicit.wf (Real.exp (-2500)) (Complex.exp ((θ : ℂ) * Complex.I))) < 0 :=
   neg_of_abs_le hc
 
-/-- C13m_hand_step, Prop. 8 proof (l.444-446): "So `f ∈ L^p(T)`; as `w(0) = 0`, the Fourier coefficients of `z`
-vanish for `n < 0` and those of `w̄` vanish for `n ≥ 0`, so `P₊f = z` and `P₋f = w̄`, and ... `f` violates (HV) ...
-if ... `∫_T G(z,w) dθ/2π < 0`": from C13b and C13c, C13m. (C13b is not used: the bounds come from C13u directly.) -/
+/-- C13m_hand_step, Prop. 8 proof (l.473-474): "Thus `f ∈ L^p(T)`. Since `w(0) = 0`, the Fourier coefficients of `z`
+vanish for `n < 0` and those of `w̄` for `n ≥ 0`, so that `P₊f = z`, `P₋f = w̄` and, as in Section 2, `f` violates
+(HV) ... if and only if `∫_T G(z,w) dθ/2π < 0`": from C13b and C13c, C13m. (C13b is not used: the bounds come from C13u directly.) -/
 theorem C13m_hand_step_proved : Paper.C13m_hand_step := by
   intro _ hc
   have hδ0 : 0 < Real.exp (-2500) := Real.exp_pos _

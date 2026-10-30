@@ -11,7 +11,7 @@ open Real
 
 namespace P18
 
-/-- l.573-574: left end of cell `i` (0-based): 114 equal cells on `[4/3, 19/10]` (width 17/3420), 16 on `[19/10, 99/50]`
+/-- l.576-577: left end of cell `i` (0-based): 114 equal cells on `[4/3, 19/10]` (width 17/3420), 16 on `[19/10, 99/50]`
 (width 1/200), 10 on `[99/50, 199/100]` (width 1/1000). -/
 noncomputable def cellLeft (i : ℕ) : ℝ :=
   if i < 114 then 4 / 3 + (i : ℝ) * (17 / 3420)
@@ -21,14 +21,14 @@ noncomputable def cellLeft (i : ℕ) : ℝ :=
 /-- Right end of cell `i` = left end of cell `i + 1` (`cellLeft 140 = 199/100`). -/
 noncomputable def cellRight (i : ℕ) : ℝ := cellLeft (i + 1)
 
-/-- l.575-577: `κ = 9/10` on the first 52 cells (`[4/3, 1361/855]`), `4/5` on the next 24 (to `77/45`), `13/20` on the last 64. -/
+/-- l.580-581: `κ = 9/10` on the first 52 cells (`[4/3, 1361/855]`), `4/5` on the next 24 (to `77/45`), `13/20` on the last 64. -/
 noncomputable def cellKappa (i : ℕ) : ℝ := if i < 52 then 9 / 10 else if i < 76 then 4 / 5 else 13 / 20
 
-/-- l.575: the target level of cell `i`: `p_b/(p_b-1) + κ (sec²(π/2p_b) - p_b/(p_b-1))` with `p_b = cellRight i`. -/
+/-- l.580: the target level of cell `i`: `p_b/(p_b-1) + κ (sec²(π/2p_b) - p_b/(p_b-1))` with `p_b = cellRight i`. -/
 noncomputable def cellLevel (i : ℕ) : ℝ :=
   cellRight i / (cellRight i - 1) + cellKappa i * (Ssec (cellRight i) - cellRight i / (cellRight i - 1))
 
-/-- Sec. 7, l.635 and l.646-650: the interpolant of `N`-periodic node values `v` (nodes `ν_j = -π + j Δt`, `Δt = 2π/N`; written `h` here) by solutions of
+/-- Sec. 7, l.637 and l.644-649: the interpolant of `N`-periodic node values `v` (nodes `ν_j = -π + j Δt`, `Δt = 2π/N`; written `h` here) by solutions of
 `φ'' + q²φ = 0` on each cell `[t_i, t_{i+1}]`. -/
 noncomputable def interp (q : ℝ) (N : ℕ) (v : ℤ → ℝ) (t : ℝ) : ℝ :=
   let h := 2 * π / N
@@ -36,14 +36,14 @@ noncomputable def interp (q : ℝ) (N : ℕ) (v : ℤ → ℝ) (t : ℝ) : ℝ :
   let ti := -π + (i : ℝ) * h
   (v i * sin (q * (ti + h - t)) + v (i + 1) * sin (q * (t - ti))) / sin (q * h)
 
-/-- Sec. 7, l.634-637: the discrete problem on `N` nodes is feasible at `λ`: `N`-periodic node values with the discrete
+/-- Sec. 7, l.636-639: the discrete problem on `N` nodes is feasible at `λ`: `N`-periodic node values with the discrete
 inequality `v_{i+1} + v_{i-1} - 2 cos(qh) v_i ≥ 0` and `v_i ≤ m_λ(t_i)` (i.e. `≤ Γ_λ(y, t_i)` for every `y`). -/
 def DiscFeasible (p s lam : ℝ) (N : ℕ) : Prop :=
   ∃ v : ℤ → ℝ, (∀ i : ℤ, v (i + N) = v i) ∧
     (∀ i : ℤ, 2 * cos (p / 2 * (2 * π / N)) * v i ≤ v (i + 1) + v (i - 1)) ∧
     ∀ (i : ℤ) (y : ℝ), v i ≤ GamLam p s lam y (-π + (i : ℝ) * (2 * π / N))
 
-/-- l.599-602, Prop. 13: the certified false width `Δ_cell` of cell `j + 25` (`j = 0..114`), exact
+/-- l.600-603, Prop. 13: the certified false width `Δ_cell` of cell `j + 25` (`j = 0..114`), exact
 rationals from the Arb log logs/false_cells_arb.log (lines "(2) FAILS at
 s = sec^2(pi/2p) - Δ ... PROVED"), extracted by a script (not shipped). -/
 def falseWidth : Fin 115 → ℚ := ![

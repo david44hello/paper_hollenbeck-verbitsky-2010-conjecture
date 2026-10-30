@@ -1,5 +1,5 @@
 /-
-  HVFalse/Proofs/CellMono.lean - Prop. 11 proof (l.583-584): the cell level is attained at the right end of the cell
+  HVFalse/Proofs/CellMono.lean - Prop. 11 proof (l.585-586): the cell level is attained at the right end of the cell
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 -/
 import HVFalse.Defs.Cells
@@ -42,7 +42,7 @@ theorem cellLeft_ge (i : ℕ) : 4 / 3 ≤ cellLeft i := by
   · have : (0:ℝ) ≤ ((i - 130 : ℕ) : ℝ) * (1 / 1000) := by positivity
     linarith
 
-/-- **C20c** (Prop. 11 proof, l.583-584): on each cell the level `L(p) = p/(p-1) + κ(sec²(π/2p) - p/(p-1))` is at least its
+/-- **C20c** (Prop. 11 proof, l.585-586): on each cell the level `L(p) = p/(p-1) + κ(sec²(π/2p) - p/(p-1))` is at least its
 value at the right end `p_b`, which is `cellLevel i`. (True for every `i`; the claim restricts to `i < 140`.) -/
 theorem level_antitone (i : ℕ) (p : ℝ) (hp : p ∈ Icc (cellLeft i) (cellRight i)) :
     cellLevel i ≤ p / (p - 1) + cellKappa i * (Ssec p - p / (p - 1)) := by

@@ -1,5 +1,5 @@
 /-
-  HVFalse/Proofs/DensityLp.lean - (eq:HV) on trigonometric polynomials ⇔ on all of L^p(T) (the paper, l.171 "by density")
+  HVFalse/Proofs/DensityLp.lean - (eq:HV) on trigonometric polynomials ⇔ on all of L^p(T) (the paper, l.181 "by density")
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
   Route. Trigonometric polynomials f_k → f in L^p (density). By [HV2000] (cited, Cited/Riesz.lean)

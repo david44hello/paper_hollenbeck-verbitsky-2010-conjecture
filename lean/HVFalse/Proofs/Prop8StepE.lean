@@ -1,5 +1,5 @@
 /-
-  HVFalse/Proofs/Prop8StepE.lean - Prop. 8 (paper l.455), step (e): "2 sin(x/2) ≥ 0.99 x there"
+  HVFalse/Proofs/Prop8StepE.lean - Prop. 8 (paper l.482), step (e): "2 sin(x/2) ≥ 0.99 x there"
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
   Used in the paper for 0 < x < x_0 ≤ e^{-1500}; Lean proves it on [0, 1/10], which contains that range.

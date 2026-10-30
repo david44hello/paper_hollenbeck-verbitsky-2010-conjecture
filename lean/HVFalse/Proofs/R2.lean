@@ -17,7 +17,7 @@ open Real MeasureTheory Set
 
 namespace P18.R2
 
-/-- l.610-611: the first cell contains `p = 4/3`, where (HV) holds at `s = sec²(π/2p)`, so no width
+/-- l.611-612: the first cell contains `p = 4/3`, where (HV) holds at `s = sec²(π/2p)`, so no width
 `Δ_cell > 0` exists on it. -/
 theorem C21d_no_width_first_cell :
     (4 / 3 : ℝ) ∈ Icc (cellLeft 0) (cellRight 0) ∧
@@ -37,7 +37,7 @@ theorem C21d_no_width_first_cell :
     (DensityLp.hvIneq_iff_lp hp1 hp2 hS (Truec.hvConst_pos hp1 hp2)).1 (LocGlob.theoremB_if hp1 hp2 hS htwo)
   exact hall (4 / 3) hmem (Ssec (4 / 3)) ⟨by linarith, le_rfl⟩ hHV
 
-/-- l.592-593: "at the right end of a cell the certified part of the window is about κ": within
+/-- l.593-594: "at the right end of a cell the certified part of the window is about κ": within
 `4·10⁻⁴` of `κ` for every certified `s_cell` (as `W(p_b) ≥ W(1.99) > 0.0058`). -/
 theorem C30f_right_end_kappa : ∀ i : ℕ, i < 140 → ∀ sc : ℝ, cellLevel i - 2 / 10 ^ 6 < sc → sc ≤ cellLevel i →
     |(sc - cellRight i / (cellRight i - 1)) / (Ssec (cellRight i) - cellRight i / (cellRight i - 1))
@@ -104,8 +104,9 @@ theorem isGLB_valid_mem {p s c : ℝ} (hglb : IsGLB {C | 0 < C ∧ HVIneqLp p s 
     have hle := hglb.2 hlb
     rwa [div_le_iff₀ hn] at hle
 
-/-- l.503-504: "Proposition 5 supplies a proof of that observation": (eq:two) fails at `s = sec²ϑ` for every
-`p ∈ (4/3, 2)`, from Prop. 5 (`Γ < e` on the valley curve, C10b3) alone - nothing cited. -/
+/-- Remark 6 (l.401-402): "Proposition 5 proves his observation [Mel, Sec. 8] that (eq:two) fails at `s = sec²ϑ` for
+`p > 4/3`": (eq:two) fails at `s = sec²ϑ` for every `p ∈ (4/3, 2)`, from Prop. 5 (`Γ < e` on its curve, C10b3) alone -
+nothing cited. -/
 theorem C04f_two_fails_at_sec {p : ℝ} (hp1 : 4 / 3 < p) (hp2 : p < 2) : ¬ TwoVar p (Ssec p) := by
   intro htwo
   obtain ⟨δ, hδ, hv⟩ := valley_negative hp1 hp2

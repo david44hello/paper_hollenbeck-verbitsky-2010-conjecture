@@ -2,7 +2,7 @@
   HVFalse/Proofs/ColeHom.lean - the paper's proof that the largest subharmonic minorant is q-homogeneous (S6)
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
-  The paper, proof of Prop. 4 (l.297-306). Let F be continuous and q-homogeneous with ∫ F∘g ≥ 0 for every polynomial g, g(0) = 0.
+  The paper, proof of Prop. 4 (l.300-309). Let F be continuous and q-homogeneous with ∫ F∘g ≥ 0 for every polynomial g, g(0) = 0.
   (a) S = {v subharmonic, v ≤ F}. Cole's Thm 2.1 (E = {0}) gives v₀ ∈ S with v₀(0) ≥ 0.
   (b) V = (sup S)⋆, the upper regularization. Demailly (4.24), PROVED in Envelope.lean: V is subharmonic (S is locally
       bounded above by F).
@@ -144,7 +144,7 @@ theorem locUnif_of_le {ι : Type} (u : ι → ℂ → EReal) {F : ℂ → ℝ} (
   rw [Real.norm_eq_abs] at h
   exact (le_abs_self _).trans h
 
-/-! ### The homogeneous minorant (paper l.290-306) -/
+/-! ### The homogeneous minorant (paper l.294-309) -/
 
 /-- **Cole's theorem + the paper's homogeneity proof**: for continuous `q`-homogeneous `F` with nonnegative disc integrals
 (discs `g`, `g(0) = 0`), there is a `q`-homogeneous subharmonic `G ≤ F` with `G(0) ≥ 0`. -/

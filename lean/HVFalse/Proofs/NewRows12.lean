@@ -2,13 +2,13 @@
   HVFalse/Proofs/NewRows12.lean - claims of the paper first stated in Lean here (A1-A4)
   Copyright (C) Dave Goel 2026--now. All rights reserved.
 
-  A4 (after Prop. 13, l.611, "where Q₄(p) → 0 as p → 4/3"): Q₄ = Acoef is continuous at 4/3 (K(4/3, u) = 2√2/3 ≠ 0)
+  A4 (row C21c, RETIRED: not a claim of the paper): Q₄ = Acoef is continuous at 4/3 (K(4/3, u) = 2√2/3 ≠ 0)
      and vanishes there (H(4/3, u(4/3)) = 0, C10a6).
-  A1 (Sec. 2, l.202, "Γ(y,π/p) - e(π/p) = (p/8)(sec²ϑ - s)y² + O(y⁴)", every s > 0): the one-variable expansions of
+  A1 (Sec. 2, l.209, "Γ(y,π/p) - e(π/p) = (p/8)(sec²ϑ - s)y² + O(y⁴)", every s > 0): the one-variable expansions of
      SaddleValley (term1_expand with c = 0, term2_expand) and e(π/p) = 0; the y² coefficients differ by (p/8)(S - s).
-  A2 (Sec. 2, l.180-183): U = Re(tanϑ ζ^q) is harmonic on the slit plane; on {Re ζ < 0}, U = max(h₁, h₂) with h₁, h₂ the
+  A2 (Sec. 2, l.189-191): U = Re(tanϑ ζ^q) is harmonic on the slit plane; on {Re ζ < 0}, U = max(h₁, h₂) with h₁, h₂ the
      continuations of U from the upper and lower half-planes (Re(c(-ζ)^q), harmonic there).
-  A3 (Sec. 3, l.235, "φ' has bounded variation"): on a window [c, c + π/(4q)],
+  A3 (Sec. 3, l.241-242, "φ' has bounded variation"): on a window [c, c + π/(4q)],
      φ'₊ = R(tan θ)·q/cos θ - q sin θ·g(tan θ) (θ = q(t-c), g the convex transform TrigCont.convexOn_transform, R its
      right derivative, monotone); every factor is monotone or (monotone) + const·(monotone), so BV (Mathlib's
      BoundedVariationOn.mul; the sum lemma bv_add is proved here); windows are joined by eVariationOn.Icc_add_Icc.
@@ -23,7 +23,7 @@ namespace P18
 
 namespace NewRows12
 
-/-- **A4**, after Prop. 13 (l.611): `Q₄(p) → 0` as `p → 4/3`. -/
+/-- **A4** (row C21c, RETIRED: not a claim of the paper): `Q₄(p) → 0` as `p → 4/3`. -/
 theorem Acoef_tendsto : Filter.Tendsto Acoef (nhds (4 / 3)) (nhds 0) := by
   have h38 : π / (2 * (4 / 3 : ℝ)) = 3 * π / 8 := by ring
   have hcos : cos (π / (2 * (4 / 3 : ℝ))) ≠ 0 := by
@@ -57,7 +57,7 @@ theorem coef_y2 {p s : ℝ} (hp1 : 1 < p) (hs : 0 < s) :
   field_simp
   ring
 
-/-- **A1**, Sec. 2 (l.202): `Γ(y,π/p) - e(π/p) = (p/8)(sec²ϑ - s)y² + O(y⁴)` for every `s > 0`. -/
+/-- **A1**, Sec. 2 (l.209): `Γ(y,π/p) - e(π/p) = (p/8)(sec²ϑ - s)y² + O(y⁴)` for every `s > 0`. -/
 theorem gam_expansion_pi_p {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) :
     ∃ C δ : ℝ, 0 < δ ∧ ∀ y : ℝ, |y| < δ →
       |Gam p s y (π / p) - ee p (π / p) - p / 8 * (Ssec p - s) * y ^ 2| ≤ C * y ^ 4 := by
@@ -84,7 +84,7 @@ theorem gam_expansion_pi_p {p s : ℝ} (hp1 : 1 < p) (hp2 : p < 2) (hs : 0 < s) 
 
 /-! ### A2: `U` is harmonic off `(-∞, 0]` and has a convex corner there -/
 
-/-- **A2a**, Sec. 2 (l.181): `U(ζ) = |ζ|^q e(arg ζ)` is harmonic on the slit plane (`U = Re(tanϑ ζ^q)`). -/
+/-- **A2a**, Sec. 2 (l.189-190): `U(ζ) = |ζ|^q e(arg ζ)` is harmonic on the slit plane (`U = Re(tanϑ ζ^q)`). -/
 theorem U_harmonic_slit {p : ℝ} (hp1 : 1 < p) (hp2 : p < 2) :
     InnerProductSpace.HarmonicOnNhd (fun ζ : ℂ => ‖ζ‖ ^ (p / 2) * ee p (Complex.arg ζ)) Complex.slitPlane := by
   have hfun : (fun ζ : ℂ => ‖ζ‖ ^ (p / 2) * ee p (Complex.arg ζ))
@@ -114,7 +114,7 @@ theorem cos_le_of_add_le {a b : ℝ} (ha : 0 ≤ a) (hab : a ≤ b) (hsum : a + 
     rw [hw]
     exact cos_le_cos_of_nonneg_of_le_pi ha (by linarith) (by linarith)
 
-/-- **A2b**, Sec. 2 (l.181-182): at a point of `(-∞, 0)`, `U` is locally the maximum of two harmonic functions
+/-- **A2b**, Sec. 2 (l.190): at a point of `(-∞, 0)`, `U` is locally the maximum of two harmonic functions
 (the continuations of `U` from the upper and from the lower half-plane): a convex corner. -/
 theorem U_convex_corner {p : ℝ} (hp1 : 1 < p) (hp2 : p < 2) {ζ0 : ℂ} (hre : ζ0.re < 0) (him : ζ0.im = 0) :
     ∃ V ∈ nhds ζ0, ∃ h1 h2 : ℂ → ℝ, InnerProductSpace.HarmonicOnNhd h1 V ∧ InnerProductSpace.HarmonicOnNhd h2 V ∧
@@ -319,7 +319,7 @@ theorem deriv_bv_window {q : ℝ} (hq : 0 < q) {φ : ℝ → ℝ} (htc : TrigCon
     simpa using bv_add hA hB
   exact bv_add (hRW.mul hsecW) ((bv_const (-q) W).mul (hsinW.mul hgW))
 
-/-- **A3**, Sec. 3 (l.235): "and `φ'` has bounded variation" (right derivative as the representative). -/
+/-- **A3**, Sec. 3 (l.241-242): "and `φ'` has bounded variation" (right derivative as the representative). -/
 theorem deriv_bv {q : ℝ} (hq0 : 1 / 2 < q) (hq1 : q < 1) {φ : ℝ → ℝ} (hφ : QSubtrig q φ) (a b : ℝ) :
     BoundedVariationOn (fun t => derivWithin φ (Set.Ici t) t) (Set.Icc a b) := by
   have hq : 0 < q := by linarith
