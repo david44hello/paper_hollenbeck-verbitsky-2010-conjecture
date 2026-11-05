@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/ThmBIfLG.lean - Theorem B "if" and C16a with NO textbook axiom, given the local⇒global principle
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   With LocGlobStmt (continuous + locally sub-mean ⇒ subharmonic) and UComp.Ufun_comp_local, U∘h is subharmonic for every
   entire h. That replaces Demailly (5.11) in C16a (h = product along a complex line) and in C16 (h = z·w along a disc), and

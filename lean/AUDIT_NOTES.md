@@ -1,5 +1,5 @@
 ## Route differences (where the Lean proof does not follow the paper word for word)
-<!-- AUDIT_NOTES.md - hand-written; scripts/audit.py appends it to AUDIT.md. Copyright (C) Dave Goel 2026--now. All rights reserved. -->
+<!-- AUDIT_NOTES.md - hand-written; scripts/audit.py appends it to AUDIT.md. Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE. -->
 
 (R1) **(HV) on L^p via trigonometric polynomials** (C01b-d). The analysis is done on trigonometric polynomials (Defs/HV.lean), then
 transported to all of L^p(T) (Proofs/DensityLp*.lean): density of trigonometric polynomials, uniqueness of Fourier

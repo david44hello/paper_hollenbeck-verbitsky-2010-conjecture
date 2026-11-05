@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/LamCole.lean - Prop. 14 "only if", the Cole step: no feasible φ ≤ m_λ ⇒ a bad disc for M_λ
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   For λ ≥ 1, Γ_λ = Γ + (λ-1)·(first term) ≥ Γ. So Γ_λ is coercive in y uniformly in t, m_λ = min over |y| ≤ R is
   continuous, and M_λ(ζ) = |ζ|^q m_λ(arg ζ) is continuous and q-homogeneous.

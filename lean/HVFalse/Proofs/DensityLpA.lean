@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/DensityLpA.lean - tools for the step to all of L^p(T) (the paper, l.181 "by density")
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   T = AddCircle (2π) with Lebesgue measure `volume = 2π • haarAddCircle`; Mathlib's `fourierCoeff` integrates against the
   probability measure `haarAddCircle`.

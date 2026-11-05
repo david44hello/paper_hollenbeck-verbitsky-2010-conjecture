@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # point_arb.py - the point proposition: Arb enclosure (200 bits) of Gamma - e at p = 3/2, s = 199/50, y = log(9/5), t = pi/2.
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 #
 # Gamma(y, t) - e(t) = ((cosh y + cos t)/(1 + cos 2th))^q - cosh(s y/2)^(p/s) - tan(th) cos(qt),  q = p/2, th = pi/(2p), |t| <= pi;

@@ -1,6 +1,6 @@
 /-
   HVFalse/Defs/Saddle.lean - the named coefficients of Prop. saddle (the paper, Prop. 5, l.334-397)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Defs.Basic
 

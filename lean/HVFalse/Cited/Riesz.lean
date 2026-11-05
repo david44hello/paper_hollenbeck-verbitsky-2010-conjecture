@@ -1,6 +1,6 @@
 /-
   HVFalse/Cited/Riesz.lean - the Hollenbeck-Verbitsky (2000) bound for the Riesz projections, as an axiom
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Used for the step from trigonometric polynomials to all of L^p(T) (paper l.181, "by density and M. Riesz's theorem"): it
   makes P₊, P₋ continuous on the dense class, so (eq:HV) passes to the limit; and for C* < ∞ in Prop. 14 (l.631, "by

@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/PointJag.lean - Jaguzović's point (the paper): Γ - e = -1.3102·10⁻³ at (3/2, 4)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   At p = 3/2, s = 4, y = log 2, t = π/2: cosh y = 5/4, cos t = 0, 1 + cos 2ϑ = 1/2, cosh(sy/2) = cosh(log 4) = 17/8,
   q = 3/4, p/s = 3/8, e(π/2) = √3 cos(3π/8) = √3 √(2-√2)/2. True value -1.31022055·10⁻³ (mpmath, 40 digits).

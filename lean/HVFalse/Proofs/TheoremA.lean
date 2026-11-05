@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/TheoremA.lean - Theorem A and Prop. fail (Prop. 4) of the paper, assembled
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route (the paper's): at s = sec²ϑ there is a point with 0 < t* < π/p and Γ < e (SaddleValley.saddle_point_proved);
   Γ is continuous in s (Threshold.gam_continuousAt_s), so the strict inequality persists at some s₁ < sec²ϑ; Γ decreases in s,

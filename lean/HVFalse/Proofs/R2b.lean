@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/R2b.lean - the explicit map g = z·w is starlike (Re(ζg'/g) > 0 in the disc)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Defs.Explicit
 

@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/LamIf.lean - Prop. 14 (C22a): (HV) with λ^{1/p} C_{s,p} ⇔ a q-subtrigonometric φ ≤ m_λ exists
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   "if": φ q-subtrigonometric means V_φ(ζ) = |ζ|^q φ(arg ζ) is subharmonic (the definition). φ is continuous (C06b), so V_φ
   is continuous (on the negative axis φ(arg ζ) = φ(arg(-ζ) + π)). Take a polynomial disc (z, w) with w(0) = 0. Then

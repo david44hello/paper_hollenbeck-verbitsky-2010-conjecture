@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/NewRows11bCells.lean - GENERATED certificates for U13 (Remark after Prop. 11, "16%")
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   pt_k: rational enclosure of Ssec at the cell end p_k = cellLeft k (k = 0..140), by NewRows11.Ssec_encl.
   cell_i: 16/100 · W(p_a) ≤ cellLevel i - 2e-6 - p_a/(p_a-1) with W(p) = Ssec p - p/(p-1), p_a = cellLeft i (i < 140).

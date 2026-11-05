@@ -1,6 +1,6 @@
 /-
   HVFalse/Defs/Minimum.lean - m(t) = inf_y Γ(y,t) and M(ζ) = |ζ|^q m(arg ζ) (the paper, l.194, l.299)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   WARNING (junk value): `⨅ y : ℝ` in ℝ is the true infimum only when the set is bounded below. For `s ≤ sec²ϑ` it is
   (C03c: the infimum is attained). For `s > sec²ϑ` `Γ` may be unbounded below and then Lean's value is 0 (meaningless).

@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/NewRows11c.lean - rows R2-R4 (claims of the paper)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Notation j(p) = p/(p-1), W(p) = Ssec p - j(p) (antitone on (1,2): NewRows11b.W_antitone).
   R2 (Remark after Prop. 11, l.591-593): for a cell i ≥ 1 and p in it, level_i - j(p) ≤ level_i - j(p_b) = κ_i W(p_b)

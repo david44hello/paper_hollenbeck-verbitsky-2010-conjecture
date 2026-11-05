@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/UComp.lean - U∘h is locally sub-mean for every entire h (no Demailly 5.11)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   U(ζ) = tanϑ Re ζ^q (q = p/2 ∈ (1/2,1)). For h entire and a ∈ ℂ, U(h(a)) ≤ mean of U∘h on small circles about a:
   (a) h(a) ≠ 0: take a holomorphic B near h(a) with Re B ≤ U everywhere and Re B(h(a)) = U(h(a)). Off the cut B is the

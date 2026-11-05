@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/CellMono.lean - Prop. 11 proof (l.585-586): the cell level is attained at the right end of the cell
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Defs.Cells
 import HVFalse.Proofs.SaddleValley

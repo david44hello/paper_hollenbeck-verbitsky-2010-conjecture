@@ -1,7 +1,7 @@
 /-
   HVFalse/Paper/Statements.lean - one theorem per claim of the paper "The Hollenbeck-Verbitsky (2010) conjecture is false"
 
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Source: the paper, version 5.72 (29 October 2026); "l.N" = line N of the LaTeX source of the posted paper (version 5.72).
   Claim ids C01-C24 were assigned first; C25+ were added later.

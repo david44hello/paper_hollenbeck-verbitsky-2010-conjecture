@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/BoxReductions.lean - the box inequalities of the certificates imply C20a and C21
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Every cell i < 140 lies in [4/3, 199/100], so 1 < p < 2 on it (cell_p_bounds).
   C20a: (eq:two) at s_cell ⇒ (eq:two) at every s ≤ s_cell (twoVar_mono) ⇒ (HV) (Theorem B "if", LocGlob.theoremB_if)

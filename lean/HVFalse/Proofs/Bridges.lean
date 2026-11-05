@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Bridges.lean - 34 elementary bridge theorems (T1-T5), moved VERBATIM
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Defs.Basic
 

@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/LocGlobCore.lean - continuous + locally sub-mean ⇒ sub-mean on every circle, axiom-free
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Fix a circle |z - c| = R and ε > 0. `exists_trig_approx` gives a trigonometric polynomial T with
   |T - u| < ε/2 on the circle. Its harmonic extension is P(z) = Re Y((z-c)/R), with Y = toZ + toW a polynomial

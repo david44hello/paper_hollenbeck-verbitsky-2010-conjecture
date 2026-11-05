@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/LamLift.lean - Prop. 14 "only if", the lift: a bad disc for M_λ refutes (HV) with λ^{1/p} C
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   G_λ(z,w) = λ A^p |z + w̄|^p - ((|z|^s + |w|^s)/2)^{p/s} (paper Sec. 7: A replaced by λ^{1/p} A); `Glam_one`: G_1 = G.
   (b3) `discs_lam`: (HV) with λ^{1/p} C_{s,p} ⇔ ∫ G_λ∘h ≥ 0 for polynomial discs h = (z, w), w(0) = 0 (route).

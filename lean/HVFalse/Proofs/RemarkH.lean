@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/RemarkH.lean - Remark 6 (paper l.399-403): H changes sign at p = 4/3
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   The paper: "By the proof above, H = 0 and dH/dp > 0 at p = 4/3, so H < 0 on an interval (4/3 - ε, 4/3)."
   Here H = H(p, u(p)). H(4/3) = 0 is SmallB.H_at_four_thirds; dH/dp = Dfun (ThresholdB.hasDerivAt_Hu) and Dfun(4/3) > 0

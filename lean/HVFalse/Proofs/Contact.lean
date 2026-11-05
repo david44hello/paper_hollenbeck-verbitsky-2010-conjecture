@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Contact.lean - Lemma contact, quadratic part (the paper): Γ(0,t) ≤ e(t) + C (t ∓ π/p)^2
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route: for 0 ≤ q ≤ 1 and x ≥ 0, Bernoulli gives x^q ≤ 1 + q(x - 1). With x = (1 + cos t)/(1 + cos(π/p)) this bounds
   Γ(0,t) = x^q - 1 by q (cos t - cos(π/p))/(1 + cos(π/p)), so Γ(0,t) - e(t) ≤ χ(t), a trig polynomial in t and qt.

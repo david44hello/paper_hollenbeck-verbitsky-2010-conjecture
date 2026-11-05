@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/SaddleTaylor.lean - Prop. 5 eq:taylor at s = S: the two-variable Taylor expansion of Γ - e at (0, π/p)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Method. All remainders are `=O[𝓝 0]` on `ℝ × ℝ` (`z = (y, τ)`) against the paper's weight
   `N = |τ|³ + y²τ² + y⁴|τ| + |y|⁶`, and the auxiliary gauge `g = y² + |τ|` (`g³ = O(N)`, `N = O(g²)`).

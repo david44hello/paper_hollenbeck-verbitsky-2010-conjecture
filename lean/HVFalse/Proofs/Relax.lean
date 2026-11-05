@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Relax.lean - Sec. 7, the discrete relaxation (the paper): C23a, C23b, C23d, C23e
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Routes.
   C23b: Sector.qsubtrig_trigConvex + discrete_of_trigConvex. Needs 1/2 < q (paper: q = p/2, 1 < p < 2).

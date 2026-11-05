@@ -1,6 +1,6 @@
 /-
   HVFalse/Cited/HKV21.lean - Cole's theorem [HKV2003, Thm 2.1] alone (no p.244 Remark), as an axiom
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Source: B. Hollenbeck, N. J. Kalton and I. E. Verbitsky, Best constants for some operators associated with the Fourier
   and Hilbert transforms, Studia Math. 157 (2003), no. 3, 237-278. STATUS: REFEREED (journal, 2003). Open access journal

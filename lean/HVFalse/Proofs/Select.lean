@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Select.lean - a continuous near-minimizer, approximated by a trigonometric polynomial
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route. (A) Grid `θ_j = j h`, `h = 2π/N`; a minimizer `v_j` at each `θ_j` is `2ε₁`-near-minimal on all of
   `[θ_j, θ_{j+1}]` (uniform continuity of `F` on a compact box). A continuous plateau function (value `v_j`,

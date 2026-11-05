@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Lift.lean - C08, Lemma 3 lift (the paper, Lemma 3), as the paper states it
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   The square root of g₀: g₀(ζ) = g₀(0) Π_a (1 - ζ/a) over the roots a of g₀ (|a| ≥ 1, as g₀ ≠ 0 in the open disc). On the
   closed disc Re(1 - ζ/a) ≥ 0 (> 0 inside), so the principal power (1 - ζ/a)^{1/2} is continuous there and holomorphic

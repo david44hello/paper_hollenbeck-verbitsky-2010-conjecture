@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 """point_check_mpmath.py - an independent interval check (mpmath iv, 50 digits) of the point proposition (p = 3/2, s = 3.98) and
 of the six failure points s_+ of the bracket proposition, written from the paper's formulas only (its set-up).

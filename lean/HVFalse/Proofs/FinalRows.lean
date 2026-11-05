@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/FinalRows.lean - rows added at the final paper version (proofs only; imported only by Paper/Statements)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   C20e / C20a_full_given_cells (Prop. 11, l.575-582): for every cell and every s with 0 ≤ L(p_b) - s < 2·10⁻⁶ (the certificate's
   s_cell is such an s), p/(p-1) < s on the whole cell, in particular p_a/(p_a - 1) < s. From NewRows11b.frac_ge: the

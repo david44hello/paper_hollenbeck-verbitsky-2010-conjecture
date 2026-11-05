@@ -1,6 +1,6 @@
 /-
   HVFalse/Cited/MelJag.lean - results of Melentijević [Mel2023] and Jaguzović [Jag2026], as axioms
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Sources (open, arXiv v2 = latest): Melentijević arXiv:2203.14364v2 (= Math. Ann. 388 (2024) 4405-4448); Jaguzović
   arXiv:2408.17093v2 (= Izv. Math. 90 (2026), no. 4, 796-812, DOI 10.4213/im9742e). STATUS: both REFEREED (journals

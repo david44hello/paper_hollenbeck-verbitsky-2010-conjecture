@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/FailLift.lean - L1 of Prop. fail (the paper): a bad disc g gives a bad polynomial pair
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route (differs from the paper's Fejér means + Lemma lift with a Blaschke product; AUDIT route difference):
   (a) FailLiftA: rescale g(ρζ) so g ≠ 0 on T, keeping ∫ M(g) < 0 (M continuous).

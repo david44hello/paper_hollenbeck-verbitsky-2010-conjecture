@@ -1,4 +1,4 @@
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # The exact versions used for every log in logs/ (Python 3.12.3). SciPy's linprog brings its own HiGHS solver.
 python-flint==0.9.0
 mpmath==1.4.1

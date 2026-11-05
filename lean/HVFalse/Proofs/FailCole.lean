@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/FailCole.lean - Prop. fail, the "no minorant ⇒ a bad disc" half (the paper, Prop. 4)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route: if every disc integral of M = |ζ|^q m(arg ζ) is ≥ 0, Cole's criterion gives a q-homogeneous subharmonic G ≤ M with
   G(0) ≥ 0; by E1c it is finite on the circle, by E1d its profile φ is trigonometrically convex and 2π-periodic, and φ ≤ m ≤ Γ;

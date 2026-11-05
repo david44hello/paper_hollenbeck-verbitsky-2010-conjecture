@@ -1,6 +1,6 @@
 /-
   HVFalse/Defs/HV.lean - the Hollenbeck-Verbitsky inequality (eq:HV) and the functions G, E, Γ_λ of the paper
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   SCOPE NOTE (for every reader and reviewer). The paper states (eq:HV) for f ∈ L^p(T). Here `HVIneq` quantifies over
   trigonometric polynomials f = Σ_n c_n e^{inθ} (finitely many c_n ≠ 0), where P₊ and P₋ are exact finite sums.

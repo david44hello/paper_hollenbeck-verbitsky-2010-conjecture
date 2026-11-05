@@ -1,7 +1,7 @@
 /-
   HVFalse/Proofs/R2e.lean - `|zw|^q` is integrable on each of the three arcs,
   and the integral identity `∫ G = Σ_j Γ_j ∫_{arc_j} |zw|^q` (Prop. 8 proof, l.476-479)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Proofs.Prop8Steps
 import HVFalse.Proofs.SmallB

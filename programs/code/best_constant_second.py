@@ -2,7 +2,7 @@
 # best_constant_second.py - the best constant (last section of the paper), second independent code: lambda_{*,N} by a 1-D LP
 #   (HiGHS, through SciPy) on nested grids N = 600 ... 9600. Floating point: numerical, not certified.
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 #
 # HV holds with constant C = lam^(1/p) * C_HV iff a q-subtrigonometric phi <= m_lam exists, where

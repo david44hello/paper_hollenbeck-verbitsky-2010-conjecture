@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/UMean.lean - the circle mean of the minorant E (paper Sec. 2, l.190-191)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   The paper (l.190-191): "its mean over |ζ| = r is r^q tanϑ sin(qπ)/(qπ) > 0 = E(0)". In polar form ζ = r e^{it},
   -π < t ≤ π, arg ζ = t, so E = r^q e(t) with e(t) = tanϑ cos(qt), and the mean is

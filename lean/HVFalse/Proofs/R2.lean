@@ -1,7 +1,7 @@
 /-
   HVFalse/Proofs/R2.lean - rows C21d, the right-end kappa row, isGLB_valid_mem and
   C04f (from Prop. 5 alone, nothing cited)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Proofs.SmallB
 import HVFalse.Proofs.Threshold

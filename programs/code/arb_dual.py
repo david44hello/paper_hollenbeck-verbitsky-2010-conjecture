@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # arb_dual.py - forward-mode dual numbers over python-flint arb balls: value and gradient enclosures (used by certify_arb.py).
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 #
 # A Dual holds an arb enclosure of f over a box and arb enclosures of the partial derivatives over the SAME box (each operation applies

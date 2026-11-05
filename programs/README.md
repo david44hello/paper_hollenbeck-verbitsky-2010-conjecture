@@ -1,6 +1,6 @@
 # The Hollenbeck–Verbitsky (2010) conjecture is false: programs and logs
 
-Dave Goel. Copyright (C) Dave Goel 2026--now. All rights reserved.
+Dave Goel. Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
 Run from this folder. Numbering as in the paper.
 

@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/SaddleSigns.lean - Prop. saddle: K > 0 and H > 0 for 4/3 < p < 2, by hand, no interval arithmetic
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route (the paper, l.391-396, certifies the signs with interval arithmetic, Arb and mpmath). Put c = cos(π/p) and x = π/p - π/2, so
   x ∈ (0, π/4) and sin x = -c. Then

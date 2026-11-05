@@ -1,7 +1,7 @@
 /-
   HVFalse/Proofs/SmallB.lean - small exact and numeric claims of the paper (C24, C10a6, C13a/d/f/g/k, C10c4, C10b3,
   C04d, C22b, C12c, C15c)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Numeric claims use exact rational bounds through integer powers (rpow_le_of_pow_le / le_rpow_of_pow_le) and
   Mathlib's π bounds; exp/cos from Taylor bounds (Real.exp_bound, Complex.exp_bound'). No interval arithmetic, no native

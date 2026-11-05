@@ -1,7 +1,7 @@
 /-
   HVFalse/Proofs/R2c.lean - 0 ≤ Re Y ≤ y₂ in the disc (row C13u, l.460-463) and the omega step
   (row C23f, RETIRED: not a claim of the paper)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Defs.Explicit
 

@@ -2,7 +2,7 @@
 # truepoints_mpmath.py - the lower bounds s_- of the bracket proposition, second independent code (mpmath interval arithmetic on
 #   the compact (r, t) form): Gamma >= e HOLDS at the six (p, s_-).
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 #
 # Gamma >= e <=> Phi(r,t) := e^{-q|y|} (Gamma - e) = kap P^q - Q^(p/s) - tan(th) cos(qt) r^q >= 0 on [0,1] x [0,pi], with r = e^{-|y|},

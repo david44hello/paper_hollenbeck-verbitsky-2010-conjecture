@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Small.lean - small exact claims of the paper (C02a, C04c, C10c3, C10d, C24, C12d)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Proofs.SaddleSigns
 import HVFalse.Defs.Saddle

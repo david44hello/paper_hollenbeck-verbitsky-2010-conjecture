@@ -1,7 +1,7 @@
 /-
   HVFalse/Proofs/Bracket.lean - Prop. 10 (bracket), the `s₊` side (claim C19a): (HV) fails on `[s₊(p), sec²(π/2p)]` at the
   six `p` of the table
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route: Prop. fail (`prop_fail`, TheoremA.lean) needs ONE point with `Γ(y,t) < e(t)` at `s₊`; `Γ` decreases in `s`
   (`gam_antitone_s`), so the point serves every `s ∈ [s₊, sec²ϑ]`. The points are the certificate's Arb points

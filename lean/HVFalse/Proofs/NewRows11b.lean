@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/NewRows11b.lean - U13, Remark after Prop. 11 (the paper): the certified part of the window
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Paper (l.593-595): "At the right end of a cell the certified part of the window, `(s_cell - p/(p-1))/(sec²(π/2p) - p/(p-1))`,
   is about κ. Inside the cell it is smaller, and its minimum over [4/3, 1.99] is about 16% (at p = 1.975)." Notation j(p) = p/(p-1), W(p) = Ssec p - j(p) (the window width).

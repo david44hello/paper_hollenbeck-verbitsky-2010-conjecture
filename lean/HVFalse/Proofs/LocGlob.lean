@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/LocGlob.lean - continuous + locally sub-mean ⇒ subharmonic, axiom-free (replaces Demailly (4.12) e)⇒b))
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   `LocGlob.submean_of_local` (LocGlobCore.lean): continuous + locally sub-mean ⇒ sub-mean on every circle.
   Here: `subharmonic_of_continuous_local` and `locGlob : ThmBIfLG.LocGlobStmt`, so that U∘h is subharmonic, E is psh

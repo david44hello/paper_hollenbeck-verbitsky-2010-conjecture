@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Threshold.lean - the threshold s₀(p) of (eq:two) (the paper): C04b
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route. (A) Γ decreases in s, so (eq:two) at s gives it at every smaller s. (B) Γ is continuous in s > 0, so the set where
   (eq:two) holds is closed. (C) (eq:two) fails for every s > sec²ϑ: at t = π/p, e = 0 and, for small y > 0,

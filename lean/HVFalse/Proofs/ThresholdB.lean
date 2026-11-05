@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/ThresholdB.lean - the threshold s₀(p): C25 (range correct iff p ≤ 4/3), C17d, C17c; C10a7 (H at p = 2)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Proofs.Threshold
 import HVFalse.Proofs.TheoremA

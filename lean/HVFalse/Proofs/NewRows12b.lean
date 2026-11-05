@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/NewRows12b.lean - R5: μ = φ'' + q²φ ≥ 0 as a measure (Sec. 3 of the paper)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Sec. 3, "so μ := φ'' + q²φ ≥ 0 as a measure", i.e. ∫ φ (b'' + q²b) ≥ 0 over one period for every 2π-periodic C² test
   function b ≥ 0.

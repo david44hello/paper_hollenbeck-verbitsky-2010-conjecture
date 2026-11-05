@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/NewRows11.lean - claims of the paper first stated in Lean here (N1-N5)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   N1, N2, N4: `Ssec p = 1/cos²(π/2p)` is enclosed by rational bounds of `cos(π/2p)` (Bracket.cos_theta_encl with
   Mathlib's 20-digit bounds of π, and the 16-term Taylor bounds Numeric2.le_cos16 / cos_le16). Certificates are generated and

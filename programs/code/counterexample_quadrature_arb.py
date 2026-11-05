@@ -2,7 +2,7 @@
 # counterexample_quadrature_arb.py - the explicit counterexample: Arb enclosure of int_T G(z, w) dtheta/2pi for the closed-form
 #   three-slit function of the paper, by quadrature in the logarithm of the distance to each end point.
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 #
 # THE FUNCTION. Rays tau_1 = -pi/p, tau_2 = t*, tau_3 = b; al_A = (t* + pi/p)/pi, al_B = (b - t*)/pi, al_C = 2 - al_A - al_B;

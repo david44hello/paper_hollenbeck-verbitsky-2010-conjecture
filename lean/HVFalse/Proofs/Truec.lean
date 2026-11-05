@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Truec.lean - Prop. 14 of the paper: the best constant is C* = λ*^{1/p} C_{s,p} (C22c)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Notation: C0 = hvConst p s > 0, g(λ) = λ^{1/p} C0, F = {λ | 1 ≤ λ ∧ LamFeasible p s λ}, S = {C | 0 < C ∧ HVIneqLp p s C}.
   Route. C22a in L^p form (DensityLp.hvIneq_iff_lp + ColeHom.truec_iff'): for λ ≥ 1, HVIneqLp p s (g λ) ↔ LamFeasible p s λ.

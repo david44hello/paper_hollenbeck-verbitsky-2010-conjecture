@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/ColeHom.lean - the paper's proof that the largest subharmonic minorant is q-homogeneous (S6)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   The paper, proof of Prop. 4 (l.300-309). Let F be continuous and q-homogeneous with ∫ F∘g ≥ 0 for every polynomial g, g(0) = 0.
   (a) S = {v subharmonic, v ≤ F}. Cole's Thm 2.1 (E = {0}) gives v₀ ∈ S with v₀(0) ≥ 0.

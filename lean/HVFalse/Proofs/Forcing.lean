@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Forcing.lean - Lemma rigidity (paper l.247-269), from trig convexity alone
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Notation: q = p/2, a = π/p (so q a = π/2), k = tan ϑ, e(t) = k cos(qt). Hypothesis: φ is q-trig-convex (`TrigConvex`)
   and φ ≤ e + C (t ∓ a)^2 for all t (this follows from φ ≤ m ≤ Γ(0,·) and Contact.lean).

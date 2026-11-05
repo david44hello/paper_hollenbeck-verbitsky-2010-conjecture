@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/NewRows12.lean - claims of the paper first stated in Lean here (A1-A4)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   A4 (row C21c, RETIRED: not a claim of the paper): Q₄ = Acoef is continuous at 4/3 (K(4/3, u) = 2√2/3 ≠ 0)
      and vanishes there (H(4/3, u(4/3)) = 0, C10a6).

@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/SaddleValley.lean - Prop. saddle: Γ - e = A(p) y⁴ + O(y⁶) along the valley, and a failure point
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Method (the paper's: Taylor expansion at (0, π/p)). All remainders are `=O[𝓝 0]` statements:
     exp w = 1 + w + w²/2 + O(w³),  log(1+z) = z - z²/2 + O(z³),  so (1+z)^r = 1 + rz + r(r-1)/2 z² + O(z³);

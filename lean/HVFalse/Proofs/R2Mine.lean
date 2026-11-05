@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/R2Mine.lean - sentences of Sec. 2 and of the proof of Prop. 5 of the paper
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Sec. 2 (l.207-211): "Moreover s₀(p) ≤ sec²ϑ: as qπ/p = π/2 and 1 + cos(π/p) = 2/sec²ϑ, we have e(π/p) = 0 and, for
   every 1 < p < 2 and s > 0, Γ(y,π/p) - e(π/p) = (1 + (sec²ϑ/2)(cosh y - 1))^q - cosh(sy/2)^{p/s}

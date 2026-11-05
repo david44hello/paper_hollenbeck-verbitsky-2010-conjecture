@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Minorant.lean - the minorant E of the paper: E = tan ϑ Re (zw)^q, and E ≤ G
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   C16c route. On {zw ≠ 0}: G = |zw|^q Γ(y, arg zw) (lift_pointwise) and E = |zw|^q e(arg zw), arg ∈ (-π, π], so (eq:two)
   gives E ≤ G. On {zw = 0}: E = 0, and G(z,w) = lim_{ε→0⁺} G(z+ε, w+ε) ≥ lim -|tan ϑ| |(z+ε)(w+ε)|^q = 0.

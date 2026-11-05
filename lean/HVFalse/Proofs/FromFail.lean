@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/FromFail.lean - claims that follow from Prop. fail (C09) in a few lines: C18, C14, C15b
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Statements.lean instantiates `h9` with the proof of C09 once it exists; until then these are "proved from C09".
 -/

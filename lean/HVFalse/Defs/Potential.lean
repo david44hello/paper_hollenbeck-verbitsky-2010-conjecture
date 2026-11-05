@@ -1,6 +1,6 @@
 /-
   HVFalse/Defs/Potential.lean - subharmonic, plurisubharmonic, q-subtrigonometric (the paper, Secs. 3 and 6)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   TRUST SURFACE. Every line here must be the TEXTBOOK notion (Demailly, Complex Analytic and Differential Geometry,
   online book, version of June 21, 2012, Ch. I: (4.12) b), p. 33, and (5.1), p. 39). Notes for the reviewer:

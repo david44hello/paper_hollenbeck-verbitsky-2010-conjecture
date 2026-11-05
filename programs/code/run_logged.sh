@@ -2,7 +2,7 @@
 # run_logged.sh - run one command, one thread, and write its output to a log that starts with a header (date, command, Python and
 #   library versions, md5 of every program in code/) and ends with the exit code and the end time.
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 # Usage (from the folder root): bash code/run_logged.sh logs/NAME.log COMMAND [ARGS...]
 set -uo pipefail

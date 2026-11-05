@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/DensityLp.lean - (eq:HV) on trigonometric polynomials ⇔ on all of L^p(T) (the paper, l.181 "by density")
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route. Trigonometric polynomials f_k → f in L^p (density). By [HV2000] (cited, Cited/Riesz.lean)
   P₊f_k and P₋f_k are Cauchy in L^p; their limits have the Fourier coefficients of P₊f, P₋f (coefficients are continuous on

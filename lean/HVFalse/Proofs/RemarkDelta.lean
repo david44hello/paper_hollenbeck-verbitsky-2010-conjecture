@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/RemarkDelta.lean - the exact claims of the remark "the size of δ" (paper l.496-507, after Prop. 8)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Defs.Explicit
 import HVFalse.Defs.Basic

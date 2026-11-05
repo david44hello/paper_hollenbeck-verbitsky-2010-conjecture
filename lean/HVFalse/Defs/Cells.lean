@@ -1,6 +1,6 @@
 /-
   HVFalse/Defs/Cells.lean - the 140 cells of Prop. cells and the discrete relaxation of Sec. 7
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import Mathlib
 import HVFalse.Defs.Basic

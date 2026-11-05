@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/FailLiftA.lean - L1 part (a): M(ζ) = |ζ|^q m(arg ζ) is continuous; rescaling g(ρζ) avoids zeros on T
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Γ(y,t) depends on t only through cos t (`Gamc`), and cos(arg ζ) = Re ζ/|ζ|. For s ≤ sec²ϑ all minimizers lie in |y| ≤ R
   (C03d), so m(t) = min over the compact [-R,R], continuous in cos t (IsCompact.continuous_sInf). Hence M is continuous on ℂ

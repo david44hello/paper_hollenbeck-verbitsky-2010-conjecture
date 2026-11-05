@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Coercive.lean - Γ(·,t) is coercive for s ≤ sec²ϑ, uniformly in t (the paper)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route. (a) with x = 2cos ϑ: the coefficient is positive iff s log x < log 2. If x ≤ 1 this is clear; if x > 1 then
   s ≤ 4/x² and, with u = x² < 2, the tangent line log u ≤ log 2 + u/2 - 1 at u = 2 and log 2 < 1 give 4 log x < x² log 2

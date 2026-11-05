@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # saddle_sign_arb.py - the saddle proposition: H > 0 and K > 0 on (4/3, 2), proved in Arb interval arithmetic (100 bits).
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 #
 # Notation: q = p/2, theta = pi/(2p), S = sec^2 theta, u = tan^2 theta = S - 1, tau = t - pi/p, and

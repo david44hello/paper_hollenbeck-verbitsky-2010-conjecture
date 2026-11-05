@@ -1,6 +1,6 @@
 /-
   HVFalse/Cited/MM2022.lean - the lower bound of Melentijević-Marković [MM2022, Sec. 2] for C_{s,p}, as an axiom
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Source: P. Melentijević and M. Marković, Best constants in inequalities involving analytic and co-analytic projections and
   Riesz's theorem in various function spaces, Potential Anal. 59 (2023), no. 4, 1599-1620, DOI 10.1007/s11118-022-10021-0;

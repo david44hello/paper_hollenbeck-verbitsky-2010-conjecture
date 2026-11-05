@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/ThmBIf.lean - Theorem B "if" (the paper) and E plurisubharmonic (C16a)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   The three local cases for U(ζ) = tanϑ Re(ζ^q) (principal power, q = p/2 ∈ (1/2,1)):
   (a) ζ ∉ (-∞, 0]: U is the real part of an analytic function, so it has the mean-value property on small circles;

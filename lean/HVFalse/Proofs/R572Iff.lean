@@ -2,7 +2,7 @@
   HVFalse/Proofs/R572Iff.lean - the equivalence in "Idea of the proof" (Sec. 1, l.137-140) as a chain: `∫_T |g|^q m(arg g)
   ≥ 0` for every polynomial `g` with `g(0) = 0` iff `|ζ|^q m(arg ζ)` has a subharmonic minorant `|ζ|^q φ(arg ζ)` iff the
   same inequality holds for every entire `g` with `g(0) = 0`; row C16i
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   The paper composes two steps proved later; this file composes the two Lean steps (q = p/2, λ = 1):
   "⇒" (`minorant_of_integrals`): the Cole step of Prop. 4 (l.302-309), ColeHom.feasible_of_discs' (Cole's Thm 2.1

@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/VComp.lean - V_φ∘h is sub-mean on every circle for entire h, axiom-free (Prop. 14 without Demailly 5.11)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   For a q-subtrigonometric φ (1/2 < q < 1) and V_φ(ζ) = |ζ|^q φ(arg ζ): V_φ∘h(c) ≤ circleAverage (V_φ∘h) c R for every
   entire h, every c and R > 0 (`comp_submean`); LamIf uses it for polynomial discs, in place of Demailly (5.11).

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # truepoints_arb.py - the lower bounds s_- of the bracket proposition: Gamma >= e HOLDS at s_- for each exact p (Arb certificate).
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 #
 # For each pair p:s_-, certify_cell(p, p, s_-) of certify_arb.py proves Psi = Gamma - e >= 0 on all (y, t) (its parts A, B, C),

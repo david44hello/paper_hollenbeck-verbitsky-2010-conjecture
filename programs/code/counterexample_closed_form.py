@@ -2,7 +2,7 @@
 # counterexample_closed_form.py - the explicit counterexample: floating-point (mpmath, 40 digits) evaluation of the closed form
 #   int G = (1/2pi) (h0 K1 delta^(-e1) + K0), O(delta) terms dropped: K1, K0, the threshold ln(1/delta), int G at four delta.
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 # Numerical, not certified. a, bb, c = q al_A, q al_B, q al_C (as in counterexample_beta_arb.py); e1 = a + bb - 1; h0 = 2^(-c).
 # Usage: python3 counterexample_closed_form.py

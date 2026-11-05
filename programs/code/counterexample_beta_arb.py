@@ -2,7 +2,7 @@
 # counterexample_beta_arb.py - the explicit counterexample, second independent code: the arc integrals by Euler's Beta function
 #   plus delta-free integrals I1, I2 (Arb, 320 bits) and explicitly bounded O(delta) remainders.
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 #
 # On T, |zw| = prod_j (2 sin(phi_j/2))^(-al_j), phi_j = theta - th_j mod 2pi, th_A = -delta/2, th_B = delta/2, th_C = pi;

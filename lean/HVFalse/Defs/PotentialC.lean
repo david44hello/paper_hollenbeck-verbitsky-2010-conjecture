@@ -1,6 +1,6 @@
 /-
   HVFalse/Defs/PotentialC.lean - upper regularization and "locally uniformly bounded above" on ℂ
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Used by the paper's own proof (l.293-306) that the largest subharmonic minorant V of a q-homogeneous M is
   q-homogeneous, which replaces HKV2003's p.244 Remark. Values in EReal (a complete lattice: no junk values here).

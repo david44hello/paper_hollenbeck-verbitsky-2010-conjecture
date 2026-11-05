@@ -1,7 +1,7 @@
 /-
   HVFalse/Proofs/Numeric2.lean - Prop. 10's six exact failure points with margins (C19c) and the 140 cell levels above the
   jag `p/(p-1)` (C20b)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   C19c: at the certificate's exact points (logs/bracket_upper_arb.log) `Γ - e < -δ` is reduced
   (`gam_sub_ee_lt_of_bounds`) to rational checks as in Bracket.lean, except the second term: `c^(p/s)` is bounded below

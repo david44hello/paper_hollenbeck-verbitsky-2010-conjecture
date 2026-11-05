@@ -2,7 +2,7 @@
 # certify_arb.py - Arb certificate that Gamma >= e (so the conjecture holds) on a p-cell [pa, pb] at one rational s: the cell
 #   proposition (140 cells), and, through truepoints_arb.py, the lower bounds s_- of the bracket proposition.
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 #
 # Theorem shape. For a p-cell [pa, pb] and ONE rational s: Psi(y, t) >= 0 for all p in [pa, pb], y >= 0, t in [0, pi], where

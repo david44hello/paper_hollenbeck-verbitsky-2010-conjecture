@@ -25,4 +25,4 @@ AUDIT: 150 paper claims (+ 3 Lean-only helpers, 3 retired rows). PROVED: 104, PR
 [AUDIT.md](AUDIT.md) names them, claim by claim. The logs that the Lean files name (`logs/...`) are in
 [../programs/logs/](../programs/logs/).
 
-Copyright (C) Dave Goel 2026--now. All rights reserved.
+Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.

@@ -2,7 +2,7 @@
 # badcells_arb.py - failure of Gamma >= e, certified in Arb (100 bits): the upper bounds s_+ of the bracket proposition (--points)
 #   and the false cells: Gamma < e at s = sec^2(pi/2p) - Delta for every p of a cell (--cells).
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 #
 # Psi(y, t) = Gamma(y, t) - e(t) = -cosh(sy/2)^(p/s) + ((cosh y + cos t)/(1 + cos(pi/p)))^(p/2) - tan(pi/2p) cos(pt/2).

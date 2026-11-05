@@ -1,6 +1,6 @@
 /-
   HVFalse/Defs/Explicit.lean - the explicit counterexample of Prop. explicit (the paper, Prop. 8, l.441-487); Hardy-space bound
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import Mathlib
 

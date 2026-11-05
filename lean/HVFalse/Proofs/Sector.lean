@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Sector.lean - homogeneous subharmonic functions: sector comparison and trig convexity (paper l.235-245)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Why this file exists: the paper (l.244-245) gets q-subtrigonometric ⇒ trigonometrically convex from HKV2003 Prop. 3.3,
   which ASSUMES continuity (the paper shows it just before, l.242-243). We prove the direction we need.

@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Discs.lean - (eq:discs) on trigonometric polynomials (the paper)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route (the paper's own, l.178-181, made exact on trigonometric polynomials):
   (1) coefficients c ↦ polynomials z = Σ_{n≥0} c_n ζ^n, w = Σ_{n<0} conj(c_n) ζ^{-n} (`toZ`, `toW`); w(0) = 0, and on the circle

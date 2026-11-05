@@ -2,7 +2,7 @@
 # run_cells.sh - the cell proposition: 140 cells on [4/3, 1.99]; per cell, the largest kappa in {1/2, 13/20, 4/5, 9/10} that proves.
 #   Also runs the self-tests of arb_dual.py and certify_arb.py (with their negative controls) first.
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 # Usage (from the folder root): bash code/run_logged.sh logs/cells_arb.log bash code/run_cells.sh   (about 1 hour, one thread)
 set -euo pipefail

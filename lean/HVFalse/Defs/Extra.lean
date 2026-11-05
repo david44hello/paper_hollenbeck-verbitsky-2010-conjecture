@@ -1,6 +1,6 @@
 /-
   HVFalse/Defs/Extra.lean - Blaschke products and feasibility in Prop. 14
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import Mathlib
 import HVFalse.Defs.Basic

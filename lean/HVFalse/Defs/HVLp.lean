@@ -1,6 +1,6 @@
 /-
   HVFalse/Defs/HVLp.lean - the Hollenbeck-Verbitsky inequality (eq:HV) on ALL of L^p(T)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   The paper (l.60-62) states (eq:HV) for f ∈ L^p(T): ‖(|P₊f|^s + |P₋f|^s)^{1/s}‖_p ≤ C ‖f‖_p, with
   P₊f = Σ_{n ≥ 0} f̂(n) e^{inθ} and P₋f = Σ_{n < 0} f̂(n) e^{inθ}. Here P₊f and P₋f are named by their Fourier coefficients:

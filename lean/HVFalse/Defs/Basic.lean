@@ -1,6 +1,6 @@
 /-
   HVFalse/Defs/Basic.lean - the real-variable definitions of the paper (Gamma, e, H, K, trig convexity)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import Mathlib.Analysis.SpecialFunctions.Pow.Real
 import Mathlib.Analysis.SpecialFunctions.Pow.Deriv

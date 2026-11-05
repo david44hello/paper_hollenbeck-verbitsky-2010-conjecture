@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/TrigCont.lean - trigonometrically convex functions are continuous; C06b (the paper, Sec. 3)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route (no axiom; HKV Lemma 3.1 not needed): with A = arctan, sin(A a - A b) = cos(A a) cos(A b) (a - b), so the chord
   inequality of `TrigConvex q φ` at the points c + A(u)/q, divided by the three cosines, is the three-point convexity of

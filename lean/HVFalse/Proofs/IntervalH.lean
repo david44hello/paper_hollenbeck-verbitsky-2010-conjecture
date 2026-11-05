@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/IntervalH.lean - C10e: the paper's three interval steps for H(p, u(p)) (Prop. 5, l.391-396), by hand
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   The paper checks with Arb/mpmath: (a) d/dp H(p,u(p)) > 0 on [4/3, 403/300]; (b) H > 0 on [403/300, 199/100];
   (c) d²/dp² H(p,u(p)) > 0 on [199/100, 2]. Here (b) is SaddleSigns.H_pos. For (a) and (c) put T = tan(π/2p): u = T²,

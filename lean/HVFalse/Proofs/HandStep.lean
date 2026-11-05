@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/HandStep.lean - C13m_hand_step: the hand step of Prop. 8 (l.473-474) from C13b and C13c to C13m
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route: at the regular points of the circle `z`, `w` (and `u = w/ζ`) are continuous, so they are the radial limits;
   the domination bound of HardyBound gives `|z|, |w| ≤ K|Π|` on the circle, so the boundary functions are in `L^{3/2}`.

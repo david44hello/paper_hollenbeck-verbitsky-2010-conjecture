@@ -1,6 +1,6 @@
 /-
   HVFalse/Proofs/Arcs.lean - C13e: (log|z/w|, arg zw) on the three arcs of T (the paper, proof of Prop. 8)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route. On |ζ| = 1 every base of Π is a polar number with an explicit argument:
     1 + e^{iθ} = 2cos(θ/2) e^{iθ/2},   1 - e^{iφ} = 2sin(φ/2) e^{i(φ-π)/2} = (-2sin(φ/2)) e^{i(φ+π)/2}.

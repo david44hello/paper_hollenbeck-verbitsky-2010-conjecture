@@ -2,7 +2,7 @@
 # best_constant_lp.py - the best constant (last section of the paper): lambda_{*,N} by linear programming (HiGHS, through SciPy).
 #   Floating point: numerical, not certified.
 # Author: Dave Goel
-# Copyright (C) Dave Goel 2026--now. All rights reserved.
+# Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 # Version 1.00 (2026-10-27). Supporting material for "The Hollenbeck-Verbitsky (2010) conjecture is false".
 #
 # HV with the constant lam^(1/p) C_HV holds <=> some q-subtrigonometric phi on the circle (phi'' + q^2 phi >= 0) satisfies

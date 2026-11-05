@@ -1,6 +1,6 @@
 /-
   HVFalse/Paper/ComputerChecked.lean - the claims of the paper that rest on large computer certificates, STATED, NOT PROVED
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Each `def` below is the EXACT Lean statement of one paper claim (type-checked by Lean), kept as a proposition instead of a
   theorem with a proof hole, so that the proved part of the project has no proof hole at all. scripts/audit.py lists every `def` here

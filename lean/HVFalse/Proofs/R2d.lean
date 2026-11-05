@@ -1,7 +1,7 @@
 /-
   HVFalse/Proofs/R2d.lean - the converse of C06a - a continuous 2π-periodic
   q-trigonometrically convex function is q-subtrigonometric (Levin's description, Sec. 3)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Proofs.VComp
 import HVFalse.Proofs.LocGlob

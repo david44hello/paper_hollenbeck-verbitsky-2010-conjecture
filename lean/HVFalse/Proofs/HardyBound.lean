@@ -1,7 +1,7 @@
 /-
   HVFalse/Proofs/HardyBound.lean - C13b: the explicit pair `z, w` of Prop. 8 is in `H^{3/2}` for every `δ ∈ (0, 2π)`
   (the paper, proof of Prop. 8, l.471-473), from C13u (`0 ≤ Re Y ≤ y₂` in the disc) and one domination bound
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 
   Route: for `|c| = 1` and `0 ≤ r ≤ 1`, `|1 - c| ≤ 2|1 - rc|`. All `α_k > 0` and `Σ α_k = 2`, so
   `|Π(re^{iθ})| ≤ 2|Π(e^{iθ})|` off the three singular angles; with C13u, `|z(re^{iθ})|, |w(re^{iθ})| ≤ 2e^{y₂/2}|Π(e^{iθ})|`.

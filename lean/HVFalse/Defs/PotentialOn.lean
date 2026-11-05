@@ -1,6 +1,6 @@
 /-
   HVFalse/Defs/PotentialOn.lean - subharmonic on an open set, polar sectors, usc regularization (for Thm B and Sec. 7)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
   Textbook: J.-P. Demailly, Complex Analytic and Differential Geometry (version June 21, 2012, open online book).
 -/
 import Mathlib

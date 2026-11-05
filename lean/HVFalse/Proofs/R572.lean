@@ -1,7 +1,7 @@
 /-
   HVFalse/Proofs/R572.lean - the identity Γ - e = exp(q|y|)Φ (Sec. 2), the end-point remark via [MM, Sec. 2] (Sec. 2),
   and two numbers of Prop. 8 and its remark; rows C04j, C04k, C04l, C04m, C13f2, C13g2 (C04m in Statements.lean)
-  Copyright (C) Dave Goel 2026--now. All rights reserved.
+  Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
 -/
 import HVFalse.Defs.Basic
 import HVFalse.Defs.Saddle
